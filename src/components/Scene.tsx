@@ -44,6 +44,7 @@ export default function Scene() {
         </button>
       </div>
 
+
       {/* 3D Canvas */}
       <Canvas shadows camera={{ position: [0, 0, 5], fov: 60 }}>
         <ambientLight intensity={0.5} />
