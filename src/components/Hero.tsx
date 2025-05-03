@@ -1,6 +1,9 @@
+import Scene from "./Scene"
 
 export const Hero = () => {
   return (
-    <div>hero</div>
+    <div className="relative">
+      <Scene/>
+    </div>
   )
 }

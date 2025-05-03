@@ -9,7 +9,7 @@ export const Route = createFileRoute('/dashboard/')({
 })
 
 function RouteComponent() {
-  return <div className='container'>
+  return <div className='w-screen'>
     <section className='h-[100vh] w-full text-center' id="hero"><Hero/></section>
     <section className='h-[100vh] w-full text-center' id="about"><About/></section>
     <section className='h-[100vh] w-full text-center' id="portfolio"><Portfolio/></section>

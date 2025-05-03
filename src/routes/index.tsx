@@ -13,9 +13,12 @@ function App() {
         <h1 className='text-7xl uppercase'>
           {t('welcome')}
         </h1>
+        <div className=' divider'>
+
         <h2 className='text-xl mb-4'>
           {t('click_to_dashboard')}
         </h2>
+        </div>
         <Link className='btn btn-soft btn-secondary px-6' to='/dashboard'>{t('click')}</Link>
     </div>
   )

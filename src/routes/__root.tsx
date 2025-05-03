@@ -1,5 +1,5 @@
-import { SwitchMenus } from '@/utils/components/SwitchMenus'
-import { ScrollToTop } from '@/utils/components/ScrollToTop'
+import { SwitchMenus } from '@/layouts/SwitchMenus'
+import { ScrollToTop } from '@/layouts/ScrollToTop'
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 

@@ -1,11 +1,11 @@
 import { LanguageSwitch } from './LanguageSwitch'
-import { ThemeSwtich } from './ThemeSwtich'
+import { ThemeSwitch } from './ThemeSwtich'
 
 export const SwitchMenus = () => {
   return (
-    <ul className='menu menu-horizontal bg-base-200 rounded-box gap-2'>
+    <ul className='menu menu-horizontal gap-2 z-50 relative'>
         <li>
-            <ThemeSwtich/>
+            <ThemeSwitch/>
         </li>
         <li>
             <LanguageSwitch/>

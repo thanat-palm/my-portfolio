@@ -1,5 +1,6 @@
 "use-client"
 
+import { toTop } from "@/utils/functions/Scrolling";
 import { useEffect, useState } from "react";
 import { FaChevronUp } from "react-icons/fa";
 
@@ -21,10 +22,6 @@ export const ScrollToTop = () => {
           window.removeEventListener('scroll', handleScroll);
         };
       }, []);
-
-    const toTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
 
   return (
     <div className="w-full h-fit sticky bottom-0 flex justify-end ">
