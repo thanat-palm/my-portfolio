@@ -1,9 +1,13 @@
 import { LanguageSwitch } from './LanguageSwitch'
 import { ThemeSwitch } from './ThemeSwtich'
 
-export const SwitchMenus = () => {
+interface SwitchMenuProps {
+  className?: string;
+}
+
+export const SwitchMenus = ({className}: SwitchMenuProps) => {
   return (
-    <ul className='menu menu-horizontal gap-2 z-50 relative'>
+    <ul className={className}>
         <li>
             <ThemeSwitch/>
         </li>

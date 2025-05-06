@@ -1,9 +1,7 @@
-import Scene from "./Scene"
+import React from 'react'
 
 export const Hero = () => {
   return (
-    <div className="relative">
-      <Scene/>
-    </div>
+    <div className='hero bg-base-200 min-h-screen'>Hero</div>
   )
 }

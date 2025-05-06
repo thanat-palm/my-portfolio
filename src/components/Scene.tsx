@@ -31,7 +31,7 @@ function FloatingShape() {
 
 export default function Scene() {
   return (
-    <div className="relative w-full33 h-screen bg-base-200 text-white">
+    <div className="relative w-full h-screen bg-base-300 text-white">
       {/* Text Overlay */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center p-8">
         <h1 className="text-5xl font-bold mb-4">Welcome to 3D World</h1>
@@ -43,15 +43,7 @@ export default function Scene() {
           Get Started
         </button>
       </div>
-
-
-      {/* 3D Canvas */}
-      <Canvas shadows camera={{ position: [0, 0, 5], fov: 60 }}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
-        <FloatingShape />
-        <OrbitControls enableZoom={false} autoRotate />
-      </Canvas>
+    
     </div>
   );
 }

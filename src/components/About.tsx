@@ -1,6 +1,6 @@
 
 export const About = () => {
   return (
-    <div>about</div>
+    <div className="hero bg-base-300 min-h-screen">about</div>
   )
 }
