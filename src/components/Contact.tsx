@@ -9,21 +9,25 @@ const contactlist = [
     platform: 'email',
     value: 'thanat061143@gmail.com',
     link: '',
+    icon: '',
   },
   {
     platform: 'facebook',
     value: 'Thanat Roongjakrwal',
     link: 'https://www.facebook.com/thanat.roongjakrwal',
+    icon: '',
   },
   {
     platform: 'instagram',
     value: 'palm_tnrw',
     link: 'https://www.instagram.com/palm_tnrw',
+    icon: '',
   },
   {
     platform: 'github',
     value: 'thanat roongjakrwal',
     link: 'https://github.com/thanat-palm',
+    icon:'',
   },
   
 ]
@@ -57,10 +61,9 @@ export const Contact = () => {
           </div>
         </div>
         <div className="card shadow-xl bg-base-300 p-8 h-fit">
-          <div className="card-title">
+          <div className="card-title w-full justify-center my-4">
             <h1 className="text-4xl uppercase">Contact Form</h1>
           </div>
-          <div className="divider"></div>
           <div className="card-body">
             <ContactForm/>
           </div>
