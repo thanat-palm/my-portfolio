@@ -12,7 +12,7 @@ function DashboardLayout() {
   return (
     <div className=''>
       <Sidebar className="fixed z-30 h-full md:hidden"/>
-      <Navbar className='navbar max-w-screen-md justify-center gap-6 fixed top-2 left-1/2 -translate-x-1/2 z-30 bg-base-300 rounded-xl max-md:hidden'/>
+      <Navbar className='navbar max-w-screen-lg py-6 justify-center gap-6 fixed top-2 left-1/2 -translate-x-1/2 z-30 bg-base-300 rounded-4xl max-md:hidden'/>
       <Outlet />
       <Footer />
     </div>

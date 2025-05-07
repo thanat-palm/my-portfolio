@@ -6,9 +6,9 @@ export const ThemeSwitch = () => {
   const { setTheme } = useUIStore()
 
   return (
-    <div tabIndex={0} className="dropdown dropdown-bottom dropdown-end btn btn-soft btn-circle">
+    <div tabIndex={0} className="dropdown dropdown-bottom dropdown-end btn btn-soft btn-circle btn-xl">
       <label >
-        <MdOutlineColorLens className="text-primary size-5" />
+        <MdOutlineColorLens className="text-primary size-8" />
       </label>
       <div tabIndex={0} className="dropdown-content join join-vertical bg-base-300 rounded-box shadow-2xl w-40 p-2">
         {Object.values(themes).map((themeName) => (

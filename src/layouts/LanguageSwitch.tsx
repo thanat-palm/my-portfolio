@@ -12,11 +12,11 @@ export const LanguageSwitch = () => {
         i18n.changeLanguage(lng)
       }
   return (
-    <div tabIndex={0} className='dropdown dropdown-bottom dropdown-end btn btn-soft btn-circle'>
+    <div tabIndex={0} className='dropdown dropdown-bottom dropdown-end btn btn-soft btn-circle btn-xl'>
         <label >
-            <MdOutlineLanguage className='text-primary size-5'/>
+            <MdOutlineLanguage className='text-primary size-8'/>
         </label>
-        <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-fit relative">
+        <ul tabIndex={0} className="dropdown-content menu p-4 shadow bg-base-200 rounded-box w-fit relative text-xl">
             {Object.values(languages).map((lang) => (
                 <li key={lang.code} >
                     <button onClick={() => changeLanguage(lang.code)} className={language === lang.code ? 'btn-active' : ''}>
