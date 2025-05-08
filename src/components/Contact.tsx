@@ -74,7 +74,7 @@ export const Contact = () => {
         >
           <div className="card-title self-center">
             <motion.h1 
-              className="text-5xl uppercase"
+              className="text-6xl uppercase"
               variants={contactVariants}
               animate="textAnimate"
             >Contact</motion.h1>
@@ -87,7 +87,7 @@ export const Contact = () => {
                   <div className="badge badge-primary badge-outline col-span-2 text-xl badge-lg">
                     {list.platform}
                   </div>
-                    <a className=" col-span-2">
+                    <a className=" col-span-2 text-nowrap">
                       {list.value}
                     </a>
                   {list.link && (
@@ -101,13 +101,13 @@ export const Contact = () => {
           </div>
         </motion.div>
         <motion.div 
-          className="card rounded-4xl shadow-xl p-8 w-[800px] h-fit"
+          className="card rounded-4xl shadow-xl p-8 w-[600px] h-fit"
           variants={contactVariants}
           initial="formOut"
           whileInView="formIn"
         >
           <div className="card-title w-full justify-center my-4">
-            <h1 className="text-5xl uppercase">Contact Form</h1>
+            <h1 className="text-6xl uppercase">Contact Form</h1>
           </div>
           <div className="card-body">
             <ContactForm/>

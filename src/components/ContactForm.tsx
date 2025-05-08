@@ -17,7 +17,7 @@ function Form() {
                     type="email" 
                     name="email"
                     placeholder="Your email"
-                    className='input input-primary w-full text-xl rounded-2xl input-lg'
+                    className='input input-primary w-full text-2xl rounded-2xl input-lg'
                     />
                 <ValidationError 
                     prefix="Email" 
@@ -33,7 +33,7 @@ function Form() {
                         id="message"
                         name="message"
                         placeholder="Your message"
-                        className='input input-primary w-full min-h-[6rem] text-xl rounded-2xl p-4 input-lg'
+                        className='input input-primary w-full min-h-[6rem] text-2xl rounded-2xl p-4 input-lg'
                         />
                     <ValidationError 
                         prefix="Message" 

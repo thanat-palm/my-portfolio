@@ -39,7 +39,7 @@ const welcomeVariants = {
   },
   dividerIn: {
     scaleX: 1,
-    transition: { type: 'spring', duration: 0.8 , delay: 0.5 },
+    transition: { duration: 0.8 , delay: 0.5 },
   },
   dividerOut: {
     scaleX: 0,
@@ -68,7 +68,7 @@ function App() {
       
     >
         <motion.h1 
-        className='text-8xl uppercase'
+        className='text-9xl uppercase'
         variants={welcomeVariants}
         animate="textAnimate"
         >
@@ -82,7 +82,7 @@ function App() {
           animate="dividerIn"
           />
           <motion.h2 
-            className='text-2xl mx-4 text-nowrap'
+            className='text-4xl mx-4 text-nowrap'
             variants={welcomeVariants}
             initial="textOut2"
             animate="textIn2"
@@ -102,7 +102,7 @@ function App() {
           initial="textOut3"
           animate="textIn3"
         >
-          <Link className='btn btn-soft btn-secondary btn-xl px-10 text-xl rounded-4xl' to='/dashboard'>{t('click')}</Link>
+          <Link className='btn btn-soft btn-secondary btn-xl px-10 text-3xl rounded-4xl' to='/dashboard'>{t('click')}</Link>
         </motion.div>
     </motion.div>
   )
