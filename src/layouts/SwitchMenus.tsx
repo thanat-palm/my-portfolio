@@ -7,13 +7,9 @@ interface SwitchMenuProps {
 
 export const SwitchMenus = ({className}: SwitchMenuProps) => {
   return (
-    <ul className={className}>
-        <li>
-            <ThemeSwitch/>
-        </li>
-        <li>
-            <LanguageSwitch/>
-        </li>
-    </ul>
+    <div className={className}>
+      <ThemeSwitch/>
+      <LanguageSwitch/>
+    </div>
   )
 }

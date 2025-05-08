@@ -5,26 +5,31 @@ import { MdOutlineLanguage } from 'react-icons/md'
 
 export const LanguageSwitch = () => {
     const { i18n } = useTranslation();
-    const { language , setLanguage } = useUIStore();
+    const { setLanguage } = useUIStore();
 
     const changeLanguage = (lng: LanguageCode) => {
         setLanguage(lng);
         i18n.changeLanguage(lng)
       }
   return (
-    <div tabIndex={0} className='dropdown dropdown-bottom dropdown-end btn btn-soft btn-circle btn-xl'>
+    <div tabIndex={0} className='dropdown dropdown-bottom dropdown-end btn btn-soft btn-accent rounded-r-full btn-lg'>
         <label >
-            <MdOutlineLanguage className='text-primary size-8'/>
+            <MdOutlineLanguage className=' size-7'/>
         </label>
-        <ul tabIndex={0} className="dropdown-content menu p-4 shadow bg-base-200 rounded-box w-fit relative text-xl">
+        <div tabIndex={0} className="dropdown-content join join-vertical bg-base-300 rounded-box shadow-2xl w-40 p-2">
             {Object.values(languages).map((lang) => (
-                <li key={lang.code} >
-                    <button onClick={() => changeLanguage(lang.code)} className={language === lang.code ? 'btn-active' : ''}>
-                        <span className='badge badge-neutral'>{lang.emoji}</span>  {lang.label}
-                    </button>
-                </li>
+                    <input
+                    type="radio"
+                    name="lang-buttons"
+                    className="btn join-item"
+                    aria-label={lang.label}
+                    value={lang.code}
+                    onChange={() => changeLanguage(lang.code)}
+                    key={lang.code}
+                    />
             ))}
-        </ul>
+        </div>
     </div>
+
   )
 }

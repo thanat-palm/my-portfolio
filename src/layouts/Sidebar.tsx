@@ -6,6 +6,7 @@ import { AnimatePresence, type delay, type Variants } from "motion/react"
 import * as motion from "motion/react-client"
 import { useEffect, useRef, useState } from "react"
 import { Navbar } from "./Navbar"
+import { SwitchMenus } from "./SwitchMenus"
 
 interface SidebarProps {
   className?: string;
@@ -33,13 +34,14 @@ export default function Sidebar({className}: SidebarProps) {
 
 const Navigation = () => (
   <motion.div 
-    className='w-screen h-screen z-40 relative flex justify-center items-center' 
+    className='w-screen h-screen z-40 relative flex flex-col justify-center items-center gap-4' 
     variants={navVariants} 
     initial="closed"
     animate="open"
     exit="closed"
   >
     <Navbar className="flex flex-col min-w-[250px] items-center justify-center gap-4"/>
+    <SwitchMenus className=""/>
   </motion.div>
 )
 

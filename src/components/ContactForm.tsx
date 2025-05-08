@@ -10,7 +10,7 @@ function Form() {
     <fieldset className="fieldset">
         <form onSubmit={handleSubmit} className='flex flex-col gap-4 min-w-[400px] '>
             <div className="card gap-1">
-                <label htmlFor="email" className='label floating-label'>
+                <label htmlFor="email" className='label floating-label '>
                     <span>Email Address</span>
                 <input
                     id="email"
@@ -42,7 +42,7 @@ function Form() {
                         />
                 </label>
             </div>
-        <button type="submit" disabled={state.submitting} className='btn btn-primary w-fit mx-auto rounded-4xl text-xl btn-lg'>
+        <button type="submit" disabled={state.submitting} className='btn btn-primary w-fit mx-auto rounded-4xl text-lg btn-lg'>
             Submit
         </button>
         </form>

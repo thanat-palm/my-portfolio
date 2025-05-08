@@ -1,8 +1,8 @@
 "use-client"
 
-import { a } from "framer-motion/client"
 import ContactForm from "./ContactForm"
 import { FaExternalLinkAlt } from "react-icons/fa"
+import * as motion from "motion/react-client"
 
 const contactlist = [
   {
@@ -29,15 +29,55 @@ const contactlist = [
     link: 'https://github.com/thanat-palm',
     icon:'',
   },
-  
 ]
+
+const contactVariants = {
+  contactIn: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.3 , delay: 0.4 },
+  },
+  contactOut: {
+    opacity: 0,
+    x: -20,
+    transition: { duration: 0.2 },
+  },
+  formIn: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.3 , delay: 0.4 },
+  },
+  formOut: {
+    opacity: 0,
+    x: 20,
+    transition: { duration: 0.2 },
+  },
+  textAnimate: {
+    y: [0 , 5 , 0],
+    transition: { 
+      duration: 0.3,
+      ease: "easeInOut",
+      repeat: Infinity,
+      repeatDelay: 2, 
+    },
+  }
+}
 
 export const Contact = () => {
   return (
     <div className="container mx-auto min-h-screen flex justify-center items-center max-lg:flex-col gap-4 mb-4">
-        <div className="card p-8 h-fit">
+        <motion.div 
+          className="card p-8 h-fit"
+          variants={contactVariants}
+          initial="contactOut"
+          whileInView="contactIn"
+        >
           <div className="card-title self-center">
-            <h1 className="text-5xl uppercase">Contact</h1>
+            <motion.h1 
+              className="text-5xl uppercase"
+              variants={contactVariants}
+              animate="textAnimate"
+            >Contact</motion.h1>
           </div>
           <div className="divider "></div>
           <div className="card-body">
@@ -59,15 +99,20 @@ export const Contact = () => {
               ))}
             </ul>
           </div>
-        </div>
-        <div className="card rounded-4xl shadow-xl bg-base-300 p-8 w-[800px] h-fit">
+        </motion.div>
+        <motion.div 
+          className="card rounded-4xl shadow-xl p-8 w-[800px] h-fit"
+          variants={contactVariants}
+          initial="formOut"
+          whileInView="formIn"
+        >
           <div className="card-title w-full justify-center my-4">
             <h1 className="text-5xl uppercase">Contact Form</h1>
           </div>
           <div className="card-body">
             <ContactForm/>
           </div>
-        </div>
+        </motion.div>
     </div>
   )
 }
