@@ -2,8 +2,10 @@ import { heroVariants } from '@/constants/AnimateVariants'
 import { scrollToSection } from '@/utils/functions/Scrolling'
 import * as motion from "motion/react-client"
 import DragPointer from './DragPointer'
+import { useTranslation } from 'react-i18next'
 
 export const Hero = () => {
+  const { t } = useTranslation();
   return (
     <div className='hero bg-base-200 min-h-screen bg-gradient-to-b from-accent to-base-100'>
       <div className="text-center max-w-4xl px-6">
@@ -12,10 +14,10 @@ export const Hero = () => {
           variants={heroVariants}
           animate="textLoop"  
         >
-          Welcome to my Portfolio
+          {t('hero-title')}
         </motion.h1>
         <p className="text-2xl mb-6">
-          Experience the mysterious beauty of deep oceanic colors with this immersive theme.
+          {t('hero-subtitle')}
         </p>
         <motion.button 
         onClick={() =>  scrollToSection('about')} 
@@ -28,11 +30,11 @@ export const Hero = () => {
             variants={heroVariants}
             animate="textBtnLoop"
           >
-            Explore Now
+            {t('scroll')}
           </motion.h1>
         </motion.button>
       </div>
-      <DragPointer/>
+      {/* <DragPointer/> */}
   </div>
   )
 }

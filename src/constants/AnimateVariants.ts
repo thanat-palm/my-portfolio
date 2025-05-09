@@ -137,12 +137,13 @@ export const heroVariants = {
         },
     },
     textLoop: {
-        y: [40 , 0 , 0 , -40],
+        scale: [1,1.1,1],
         transition: { 
-          duration: 5,
-          times: [0,0.1,0.9,1],
+          duration: 1,
+          times: [0,0.5,1],
           ease: "easeInOut",
           repeat: Infinity,
+          repeatDelay: 1
         },
     }
     

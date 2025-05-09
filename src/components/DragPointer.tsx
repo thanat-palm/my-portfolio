@@ -7,7 +7,7 @@ export default function DragPointer() {
     const ref = useRef<HTMLDivElement>(null)
     const { x, y } = useFollowPointer(ref)
 
-    return <motion.div ref={ref} className="size-[100px] rounded-full bg-primary-100 blur-sm" style={{ x , y }} />
+    return <motion.div ref={ref} className="size-[100px] rounded-full border-2 " style={{ x , y }} />
 }
 
 
@@ -34,15 +34,4 @@ export function useFollowPointer(ref: RefObject<HTMLDivElement | null>) {
     }, [])
 
     return { x, y }
-}
-
-/**
- * ==============   Styles   ================
- */
-
-const ball = {
-    width: 100,
-    height: 100,
-    backgroundColor: "#ff0088",
-    borderRadius: "50%",
 }
