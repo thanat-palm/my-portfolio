@@ -5,22 +5,13 @@ import { Footer } from '@/layouts/Footer'
 import { Navbar } from '@/layouts/Navbar'
 import * as motion from "motion/react-client"
 import Sidebar from '@/layouts/Sidebar'
+import { navVariants } from '@/constants/AnimateVariants'
 
 export const Route = createFileRoute('/dashboard')({
   component: DashboardLayout,
 })
 
-const navVariants = {
-  open: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 , delay: 0.3 },
-  },
-  closed: {
-    opacity: 0,
-    y: -20,
-  },
-}
+
 
 
 
@@ -35,7 +26,7 @@ function DashboardLayout() {
         animate="open"
         exit="closed"
       >
-        <Navbar className='items-center overflow-hidden p-2  bg-base-300 rounded-full border-2 border-primary max-md:hidden'/>
+        <Navbar className='items-center overflow-hidden p-2 bg-transparent backdrop-blur-lg rounded-full border-2 border-primary max-md:hidden'/>
       </motion.div>
       <Outlet />
       <Footer />

@@ -1,12 +1,12 @@
 "use client"
 
 import type React from "react"
-
 import { AnimatePresence, type delay, type Variants } from "motion/react"
 import * as motion from "motion/react-client"
 import { useEffect, useRef, useState } from "react"
 import { Navbar } from "./Navbar"
 import { SwitchMenus } from "./SwitchMenus"
+import { navbarVariants, sidebarVariants } from "@/constants/AnimateVariants"
 
 interface SidebarProps {
   className?: string;
@@ -35,7 +35,7 @@ export default function Sidebar({className}: SidebarProps) {
 const Navigation = () => (
   <motion.div 
     className='w-screen h-screen z-40 relative flex flex-col justify-center items-center gap-4' 
-    variants={navVariants} 
+    variants={navbarVariants} 
     initial="closed"
     animate="open"
     exit="closed"
@@ -44,39 +44,6 @@ const Navigation = () => (
     <SwitchMenus className=""/>
   </motion.div>
 )
-
-const navVariants = {
-  open: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.3 , delay: 0.4 },
-  },
-  closed: {
-    opacity: 0,
-    y: 20,
-    transition: { duration: 0.2 },
-  },
-}
-
-const sidebarVariants = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-    transition: {
-      type: "spring",
-      stiffness: 20,
-      restDelta: 2,
-    },
-  }),
-  closed: {
-    clipPath: "circle(0 at 40px 40px)",
-    transition: {
-      delay: 0.2,
-      type: "spring",
-      stiffness: 400,
-      damping: 40,
-    },
-  },
-}
 
 interface PathProps {
   d?: string

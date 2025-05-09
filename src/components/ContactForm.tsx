@@ -42,7 +42,7 @@ function Form() {
                         />
                 </label>
             </div>
-        <button type="submit" disabled={state.submitting} className='btn btn-primary w-fit mx-auto rounded-4xl text-lg btn-lg'>
+        <button type="submit" disabled={state.submitting} className='btn btn-primary w-fit mx-auto rounded-4xl text-2xl btn-lg'>
             Submit
         </button>
         </form>
