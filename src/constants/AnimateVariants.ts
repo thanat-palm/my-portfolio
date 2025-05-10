@@ -1,3 +1,4 @@
+import { delay } from "framer-motion"
 
 export const contactVariants = {
   contactIn: {
@@ -17,7 +18,7 @@ export const contactVariants = {
   },
   formOut: {
     opacity: 0,
-    x: 20,
+    x: -20,
     transition: { duration: 0.2 },
   },
   textAnimate: {
@@ -28,7 +29,13 @@ export const contactVariants = {
       repeat: Infinity,
       repeatDelay: 2, 
     },
-  }
+  },
+  childIn: {
+    transition: { staggerChildren: 0.1, delayChildren: 0.3 },
+  },
+  childOut: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
 }
 
 export const welcomeVariants = {
@@ -127,6 +134,29 @@ export const sidebarVariants = {
 }
 
 export const heroVariants = {
+    titleIn: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+    titleOut: {
+      opacity: 0,
+      y: -20,
+    },
+    subtitleIn: {
+      opacity: 1,
+      transition: { duration: 0.5 , delay: 0.4 },
+    },
+    subtitleOut: {
+      opacity: 0,
+    },
+    btnIn: {
+      opacity: 1,
+      transition: { duration: 0.5 , delay: 0.8 },
+    },
+    btnOut: {
+      opacity: 0,
+    },
     textBtnLoop: {
         y: [40 , 0 , 0 , -40],
         transition: { 
@@ -148,3 +178,107 @@ export const heroVariants = {
     }
     
 } 
+
+export const aboutVariants = {
+  titleIn: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 , delay: 0.4 },
+
+  },
+  titleOut: {
+    opacity: 0,
+    y: 30,
+  },
+  subtitleIn: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 , delay: 0.4 },
+  },
+  subtitleOut: {
+    opacity: 0,
+    y: 30,
+  },
+  imageIn: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.5 , delay: 0.2 },
+  },
+  imageOut: {
+    opacity: 0,
+    scale: 0
+  },
+  imageLoop: {
+    rotate:360,
+    transition: {
+      repeat: Infinity,
+      duration: 3,
+      ease: 'linear'
+    }
+  },
+  childIn: {
+    transition: { staggerChildren: 0.1, delayChildren: 0.7 },
+  },
+  childOut: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+}
+
+export const PortfolioVariants = {
+  titleIn: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
+  titleOut: {
+    opacity: 0,
+    y: 20,
+  },
+  itemIn: {
+    opacity: 1,
+    transition: { duration: 1 , delay: 0.6 },
+  },
+  itemOut: {
+    opacity: 0,
+    transition: { duration: 1 , delay: 0.6},
+  },
+  childIn: {
+    transition: { staggerChildren: 0.07, delayChildren: 0.4 },
+  },
+  childOut: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+}
+
+
+//child variants
+
+export const childUpVariants = {
+  childIn: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
+  childOut: {
+    opacity: 0,
+    y: 30
+  }
+}
+
+export const childLeftVariants = {
+  childIn: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5 },
+  },
+  childOut: {
+    opacity: 0,
+    x: 30
+  }
+}
+
+export const childCardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  exit: { opacity: 0, y: 30, transition: { duration: 0.3 } }
+}

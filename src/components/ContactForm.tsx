@@ -1,59 +1,74 @@
-import React from 'react';
+import { useEffect, useRef } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import { useToastStore } from '@/store/messageStore';
 
 function Form() {
   const [state, handleSubmit] = useForm("xeoggvqj");
-  if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
-  }
+  const formRef = useRef<HTMLFormElement>(null);
+  const showToast = useToastStore((s) => s.showToast)
+
+  useEffect(() => {
+    if (state.succeeded === true) {
+      showToast('Form submitted successfully!', 'success')
+      formRef.current?.reset()
+    } else if (state.errors) {
+      showToast('Form submission failed!', 'fail')
+    }
+  }, [state.succeeded, state.errors])
+
   return (
     <fieldset className="fieldset">
-        <form onSubmit={handleSubmit} className='flex flex-col gap-4 min-w-[400px] '>
-            <div className="card gap-1">
-                <label htmlFor="email" className='label floating-label '>
-                    <span>Email Address</span>
-                <input
-                    id="email"
-                    type="email" 
-                    name="email"
-                    placeholder="Your email"
-                    className='input input-primary w-full text-2xl rounded-2xl input-lg'
-                    />
-                <ValidationError 
-                    prefix="Email" 
-                    field="email"
-                    errors={state.errors}
-                    />
-                </label>
-            </div>
-            <div className="card gap-1">
-                <label htmlFor="email" className='label floating-label '>
-                    <span>Your Message</span>
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Your message"
-                        className='input input-primary w-full min-h-[6rem] text-2xl rounded-2xl p-4 input-lg'
-                        />
-                    <ValidationError 
-                        prefix="Message" 
-                        field="message"
-                        errors={state.errors}
-                        />
-                </label>
-            </div>
-        <button type="submit" disabled={state.submitting} className='btn btn-primary w-fit mx-auto rounded-4xl text-2xl btn-lg'>
-            Submit
-        </button>
+      <div className="card glass">
+        <form ref={formRef} onSubmit={handleSubmit} className="card-body space-y-5">
+          <div>
+            <label htmlFor="name" className="block text-2xl font-medium mb-1">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              className="input input-bordered w-full text-2xl"
+              
+            />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block text-2xl font-medium mb-1">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              className="input input-bordered w-full text-2xl"
+              
+            />
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
+          </div>
+
+          <div>
+            <label htmlFor="message" className="block text-2xl font-medium mb-1">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Type your message..."
+              className="textarea textarea-bordered w-full h-32 resize-none text-2xl"
+              
+            />
+            <ValidationError prefix="Message" field="message" errors={state.errors} />
+          </div>
+
+          <button type="submit" disabled={state.submitting} className="btn btn-primary btn-lg text-2xl text-primary-content">
+            Send Message
+          </button>
         </form>
+      </div>
     </fieldset>
   );
 }
 
 function ContactForm() {
-  return (
-    <Form />
-  );
+  return <Form />;
 }
 
 export default ContactForm;
