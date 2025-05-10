@@ -11,10 +11,6 @@ export const Route = createFileRoute('/dashboard')({
   component: DashboardLayout,
 })
 
-
-
-
-
 function DashboardLayout() {
   return (
     <div className=''>

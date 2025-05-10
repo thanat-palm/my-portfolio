@@ -12,7 +12,7 @@ export const About = () => {
           variants={aboutVariants}
           initial="titleOut"
           whileInView="titleIn"
-          >Hi, I'm Palm 👋</motion.h1>
+          >Hi, I'm Palm</motion.h1>
         <motion.p 
           className="text-base-content text-2xl leading-relaxed"
           variants={aboutVariants}

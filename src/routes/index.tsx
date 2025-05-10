@@ -26,7 +26,7 @@ function App() {
         animate="textIn"
         >
         <motion.h1 
-        className='text-9xl uppercase'
+        className='text-9xl uppercase max-sm:text-8xl'
         variants={welcomeVariants}
         animate="textAnimate"
         >
@@ -41,7 +41,7 @@ function App() {
           animate="dividerIn"
           />
           <motion.h2 
-            className='text-4xl mx-4 text-nowrap'
+            className='text-4xl max-sm:text-3xl mx-4 text-nowrap'
             variants={welcomeVariants}
             initial="textOut2"
             animate="textIn2"
@@ -61,7 +61,7 @@ function App() {
           initial="textOut3"
           animate="textIn3"
           >
-          <Link className='btn btn-soft btn-secondary btn-xl px-10 text-3xl rounded-4xl' to='/dashboard'>{t('click')}</Link>
+          <Link className='btn btn-soft btn-secondary btn-xl px-10 text-3xl max-sm:text-2xl max-sm:btn-lg rounded-4xl' to='/dashboard'>{t('click')}</Link>
         </motion.div>
   </div>
   )

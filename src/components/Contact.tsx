@@ -1,8 +1,9 @@
 // "use-client"
 
-import { FaExternalLinkAlt } from "react-icons/fa"
+import { FaExternalLinkAlt, FaFacebook, FaGithub, FaInstagram } from "react-icons/fa"
 import ContactForm from "./ContactForm"
 import * as motion from "motion/react-client"
+import { HiOutlineMail } from "react-icons/hi";
 import { childLeftVariants, childUpVariants, contactVariants } from "@/constants/AnimateVariants"
 
 const contactlist = [
@@ -10,82 +11,27 @@ const contactlist = [
     platform: 'Email',
     value: 'thanat061143@gmail.com',
     link: '',
-    icon: '',
+    icon: <HiOutlineMail />,
   },
   {
     platform: 'Facebook',
     value: 'Thanat Roongjakrwal',
     link: 'https://www.facebook.com/thanat.roongjakrwal',
-    icon: '',
+    icon: <FaFacebook />,
   },
   {
     platform: 'Instagram',
     value: 'palm_tnrw',
     link: 'https://www.instagram.com/palm_tnrw',
-    icon: '',
+    icon: <FaInstagram />,
   },
   {
     platform: 'Github',
     value: 'thanat roongjakrwal',
     link: 'https://github.com/thanat-palm',
-    icon:'',
+    icon: <FaGithub />,
   },
 ]
-
-
-// export const Contact = () => {
-//   return (
-//     <div className="w-full max-w-6xl mx-auto px-6 py-20 flex flex-col-reverse lg:flex-row items-center gap-10 min-h-screen">
-//         <motion.div 
-//           className="card glass rounded-4xl shadow-xl p-8 h-fit"
-//           variants={contactVariants}
-//           initial="contactOut"
-//           whileInView="contactIn"
-//         >
-//           <div className="card-title self-center">
-//             <motion.h1 
-//               className="text-6xl uppercase"
-//               variants={contactVariants}
-//               animate="textAnimate"
-//             >Contact</motion.h1>
-//           </div>
-//           <div className="divider "></div>
-//           <div className="card-body">
-//             <ul className="list text-2xl">
-//               {contactlist.map((list) => (
-//                 <li className="list-row grid-cols-5" key={list.platform}>
-//                   <div className="badge badge-primary badge-outline col-span-2 text-2xl badge-xl">
-//                     {list.platform}
-//                   </div>
-//                     <a className=" col-span-2 text-nowrap">
-//                       {list.value}
-//                     </a>
-//                   {list.link && (
-//                     <a href={list.link} className="col-span-1 justify-self-end link link-primary">
-//                       <FaExternalLinkAlt />
-//                     </a>
-//                   )}
-//                 </li>
-//               ))}
-//             </ul>
-//           </div>
-//         </motion.div>
-//         <motion.div 
-//           className="card p-8 w-[600px] h-fit"
-//           variants={contactVariants}
-//           initial="formOut"
-//           whileInView="formIn"
-//         >
-//           <div className="card-title w-full justify-center my-4">
-//             <h1 className="text-6xl uppercase">Contact Form</h1>
-//           </div>
-//           <div className="card-body">
-//             <ContactForm/>
-//           </div>
-//         </motion.div>
-//     </div>
-//   )
-// }
 
 export default function Contact() {
   return (
@@ -134,12 +80,14 @@ export default function Contact() {
                   className="list-row flex" key={list.platform}
                   variants={childLeftVariants}
                   >
-                   <div className="badge badge-primary badge-outline text-2xl badge-xl flex-1">
-                     {list.platform}
+                   <div className="text-2xl flex-1">
+                     {list.icon}
                    </div>
-                   <a className="flex-2 text-nowrap">
-                     {list.value}
-                   </a>
+                   <div className="flex-6 justify-center ">
+                      <a className=" text-nowrap">
+                        {list.value}
+                      </a>
+                   </div>
                    <div className="flex-1 justify-self-end">
                     {list.link && (
                       <a href={list.link} className=" link link-primary">
