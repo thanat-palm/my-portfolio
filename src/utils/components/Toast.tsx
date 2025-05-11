@@ -1,7 +1,6 @@
 // components/Toast.tsx
 import { useToastStore } from '@/store/messageStore'
 import { AnimatePresence, motion } from 'framer-motion'
-import { FaCheckCircle } from 'react-icons/fa'
 import { BsCheckCircleFill , BsXCircleFill , BsExclamationCircleFill  } from "react-icons/bs";
 
 export const Toast = () => {
@@ -11,22 +10,22 @@ export const Toast = () => {
     switch (messageStatus) {
       case 'success':
         return {
-          icon: <BsCheckCircleFill className="w-6 h-6 text-green-500" />,
-          bg: 'bg-green-100',
-          text: 'text-green-800',
+          icon: <BsCheckCircleFill className="w-6 h-6 text-success-content" />,
+          bg: 'bg-success',
+          text: 'text-success-content',
         }
       case 'fail':
         return {
-          icon: <BsXCircleFill className="w-6 h-6 text-red-500" />,
-          bg: 'bg-red-100',
-          text: 'text-red-800',
+          icon: <BsXCircleFill className="w-6 h-6 text-error-content" />,
+          bg: 'bg-error',
+          text: 'text-error-content',
         }
       case 'info':
       default:
         return {
-          icon: <BsExclamationCircleFill className="w-6 h-6 text-blue-500" />,
-          bg: 'bg-blue-100',
-          text: 'text-blue-800',
+          icon: <BsExclamationCircleFill className="w-6 h-6 text-info-content" />,
+          bg: 'bg-info',
+          text: 'text-info-content',
         }
     }
   }
@@ -46,7 +45,7 @@ export const Toast = () => {
         >
           <div className={`flex items-center gap-3 ${text}`}>
             {icon}
-            <span className="text-lg font-medium">{message}</span>
+            <span className="text-2xl">{message}</span>
           </div>
         </motion.div>
       )}

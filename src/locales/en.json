@@ -8,5 +8,20 @@
   "click": "Click",
   "scroll": "Scroll to Continue",
   "hero-title": "Welcome to my Portfolio",
-  "hero-subtitle": "Experience the mysterious beauty of deep oceanic colors with this immersive theme."
+  "hero-subtitle": "Experience the mysterious beauty of deep oceanic colors with this immersive theme.",
+  "about-subtitle": "สวัสดีครับ ผมเป็นนักพัฒนาซอฟต์แวร์ที่ชื่นชอบการสร้างระบบที่มีประสิทธิภาพ ใช้งานง่าย และตอบโจทย์ผู้ใช้ เน้นทั้งฝั่ง Frontend และ Backend ด้วยเทคโนโลยี ที่ทันสมัย พร้อมเรียนรู้สิ่งใหม่ตลอดเวลา",
+  "categories-all": "All",
+  "categories-1": "Web",
+  "categories-2": "Mobile",
+  "categories-3": "Design",
+  "contact-title": "Let's Get In Touch",
+  "contact-subtitle": "Have a question or want to work together? Fill out the form below or reach me directly.",
+  "form-name": "Name",
+  "form-email": "Email",
+  "form-message": "Message",
+  "form-message-sent": "Send Message",
+  "placeholder-name": "Your name",
+  "placeholder-email": "you@example.com",
+  "placeholder-message": "Type your message..."
+
 }

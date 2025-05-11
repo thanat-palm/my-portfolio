@@ -1,10 +1,11 @@
-// "use-client"
+"use client"
 
 import { FaExternalLinkAlt, FaFacebook, FaGithub, FaInstagram } from "react-icons/fa"
 import ContactForm from "./ContactForm"
 import * as motion from "motion/react-client"
-import { HiOutlineMail } from "react-icons/hi";
+import { HiOutlineMail } from "react-icons/hi"
 import { childLeftVariants, childUpVariants, contactVariants } from "@/constants/AnimateVariants"
+import { useTranslation } from "react-i18next"
 
 const contactlist = [
   {
@@ -34,71 +35,70 @@ const contactlist = [
 ]
 
 export default function Contact() {
+  const { t } = useTranslation()
+
   return (
-    <section className="max-w-5xl mx-auto px-6 py-20" id="contact">
+    <section className="max-w-7xl mx-auto px-6 sm:px-12 md:px-20 py-28" id="contact">
       {/* Header */}
-      <motion.div 
-        className="text-center mb-12"
+      <motion.div
+        className="text-center mb-20"
         variants={contactVariants}
         initial="childOut"
         whileInView="childIn"
       >
-        <motion.h1 
-          className="text-6xl font-bold text-primary"
-          variants={childUpVariants}  
-        >Let's Get In Touch</motion.h1>
-        <motion.p 
-          className="text-base-content mt-2 text-2xl"
-          variants={childUpVariants}  
+        <motion.h1
+          className="text-7xl sm:text-8xl font-extrabold text-primary"
+          variants={childUpVariants}
         >
-          Have a question or want to work together? Fill out the form below or reach me directly.
+          {t('contact-title')}
+        </motion.h1>
+        <motion.p
+          className="mt-4 text-3xl text-base-content font-light"
+          variants={childUpVariants}
+        >
+          {t('contact-subtitle')}
         </motion.p>
       </motion.div>
 
-      {/* Grid: Form + Info */}
-      <div className="grid md:grid-cols-2 gap-10">
+      {/* Grid */}
+      <div className="grid md:grid-cols-2 gap-16 items-start">
         {/* Contact Form */}
-        <motion.div 
-          className=""
+        <motion.div
           variants={contactVariants}
           initial="formOut"
           whileInView="formIn"
         >
-          <ContactForm/>
+          <ContactForm />
         </motion.div>
 
         {/* Contact Info */}
-        <div className="space-y-4 text-2xl">
-              <motion.ul 
-                className="list text-2xl"
-                variants={contactVariants}
-                initial="childOut"
-                whileInView="childIn"
-              >
-               {contactlist.map((list) => (
-                 <motion.li 
-                  className="list-row flex" key={list.platform}
-                  variants={childLeftVariants}
-                  >
-                   <div className="text-2xl flex-1">
-                     {list.icon}
-                   </div>
-                   <div className="flex-6 justify-center ">
-                      <a className=" text-nowrap">
-                        {list.value}
-                      </a>
-                   </div>
-                   <div className="flex-1 justify-self-end">
-                    {list.link && (
-                      <a href={list.link} className=" link link-primary">
-                        <FaExternalLinkAlt />
-                      </a>
-                    )}
-                   </div>
-                 </motion.li>
-               ))}
-             </motion.ul>
-        </div>
+        <motion.ul
+          className="space-y-6 text-3xl"
+          variants={contactVariants}
+          initial="childOut"
+          whileInView="childIn"
+        >
+          {contactlist.map((list) => (
+            <motion.li
+              key={list.platform}
+              className="flex items-center gap-6"
+              variants={childLeftVariants}
+            >
+              <div className="text-4xl text-primary">{list.icon}</div>
+              <div className="flex-1 text-nowrap">{list.value}</div>
+              {list.link && (
+                <a
+                  href={list.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl text-primary hover:scale-110 transition-transform"
+                >
+                  <FaExternalLinkAlt />
+                </a>
+              )}
+            </motion.li>
+          ))}
+        </motion.ul>
       </div>
     </section>
   )

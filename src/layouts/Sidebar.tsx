@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { AnimatePresence, type delay, type Variants } from "motion/react"
+import { AnimatePresence, type Variants } from "motion/react"
 import * as motion from "motion/react-client"
 import { useEffect, useRef, useState } from "react"
 import { Navbar } from "./Navbar"
@@ -23,37 +23,21 @@ export default function Sidebar({className}: SidebarProps) {
           <motion.div className="bg-primary absolute top-0 left-0 bottom-0 w-screen z-30" variants={sidebarVariants} />
           <AnimatePresence>
             {isOpen && (
-              <Navigation onSectionClick={() => setIsOpen(false)}/>
+              <motion.div
+                className='w-screen h-screen z-40 relative flex flex-col justify-center items-center gap-4' 
+                variants={navbarVariants} 
+                initial="closed"
+                animate="open"
+                exit="closed"
+              >
+                <Navbar className="flex flex-col min-w-[250px] items-center justify-center gap-4" onSectionClick={() => setIsOpen(false) }/>
+                <SwitchMenus />
+              </motion.div>
             )}
           </AnimatePresence>
           <MenuToggle toggle={() => setIsOpen(!isOpen)} className="btn btn-circle outline-0 border-0 shadow-none bg-primary absolute top-[20px] left-[20px] z-50"/>
         </motion.nav>
     </div>
-  )
-}
-
-interface NavigationProps {
-  onSectionClick?: (section: string) => void;
-}
-
-
-const Navigation = ({onSectionClick}:NavigationProps) => {
-  const handleClick = (pathname:string) => {
-      if (onSectionClick) {
-        onSectionClick(pathname);
-      }
-  }
-  return (
-    <motion.div
-      className='w-screen h-screen z-40 relative flex flex-col justify-center items-center gap-4' 
-      variants={navbarVariants} 
-      initial="closed"
-      animate="open"
-      exit="closed"
-    >
-      <Navbar className="flex flex-col min-w-[250px] items-center justify-center gap-4" onSectionClick={(pathname:string) => handleClick(pathname)}/>
-      <SwitchMenus />
-    </motion.div>
   )
 }
 

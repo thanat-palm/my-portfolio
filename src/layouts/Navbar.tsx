@@ -4,9 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 interface NavbarProps {
   className?: string;
-  onSectionClick?: (section: string) => void;
+  onSectionClick?: (section?: string) => void;
 }
-
 
 export const Navbar = ({className,onSectionClick}: NavbarProps) => {
   const {t} = useTranslation();

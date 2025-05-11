@@ -1,6 +1,8 @@
 import { About } from '@/components/About'
+import About2 from '@/components/About2'
 import Contact from '@/components/Contact'
 import { Hero } from '@/components/Hero'
+import Hero2 from '@/components/Hero2'
 import { Portfolio } from '@/components/Portfolio'
 import { createFileRoute } from '@tanstack/react-router'
 import { useEffect } from 'react'
@@ -16,8 +18,8 @@ function RouteComponent() {
     }, []);
   return (
     <div className=''>
-    <Hero/>
-    <About/>
+    <Hero2/>
+    <About2/>
     <Portfolio/>
     <Contact/>
     </div>
