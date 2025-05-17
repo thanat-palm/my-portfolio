@@ -38,10 +38,9 @@ export const Toast = () => {
         <motion.div
           key="toast"
           className={`toast toast-end z-50 ${bg} p-4 rounded shadow-lg`}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 50 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
         >
           <div className={`flex items-center gap-3 ${text}`}>
             {icon}

@@ -257,7 +257,7 @@ export const childUpVariants = {
   childIn: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5 },
+    // transition: { duration: 0.5 },
   },
   childOut: {
     opacity: 0,
@@ -281,4 +281,27 @@ export const childCardVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   exit: { opacity: 0, y: 30, transition: { duration: 0.3 } }
+}
+
+export const toastVariants = {
+  hidden: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0 ,type: 'spring', stiffness: 300, damping: 20},
+}
+
+export const bannerLoop = {
+      hide: {
+        y:50,
+        opacity: 0,
+        transition: {
+          type: 'spring'
+        }
+      },
+      visible: {
+        y:0,
+        opacity: 1,
+        transition: {
+          type: 'spring'
+        }
+      }
+      
 }
