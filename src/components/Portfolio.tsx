@@ -56,7 +56,6 @@ export function Portfolio() {
         variants={PortfolioVariants}
         initial="titleOut"
         whileInView="titleIn"
-        viewport={{ once: true }}
       >
         {t('portfolio')}
       </motion.h1>
@@ -67,14 +66,13 @@ export function Portfolio() {
         variants={PortfolioVariants}
         initial="childOut"
         whileInView="childIn"
-        viewport={{ once: true }}
       >
         {categories.map((cat) => (
           <motion.button
             key={cat.value}
             variants={childUpVariants}
             onClick={() => setActive(cat.value)}
-            className={`rounded-full badge badge-lg sm:badge-xl py-4 px-5 sm:py-6 sm:px-7 text-2xl sm:text-3xl font-medium transition-all ${
+            className={`rounded-full badge badge-lg sm:badge-xl py-4 px-5 sm:py-6 sm:px-7 text-2xl sm:text-3xl font-medium ${
               active === cat.value
                 ? 'bg-primary text-primary-content border-primary'
                 : 'bg-base-200 text-base-content border-base-300'
@@ -91,7 +89,6 @@ export function Portfolio() {
         variants={PortfolioVariants}
         initial="itemOut"
         whileInView="itemIn"
-        viewport={{ once: true }}
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
       >
         <AnimatePresence>
@@ -99,11 +96,7 @@ export function Portfolio() {
             <motion.div
               key={item.id}
               layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
               whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
             >
               <PortfolioCard title={item.title} image={item.image} />
             </motion.div>

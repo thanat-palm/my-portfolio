@@ -40,7 +40,6 @@ export const About = () => {
         </motion.ul>
       </div>
 
-      {/* Profile Image */}
       <div className="flex-1 flex justify-center">
         <motion.div 
             className="flex justify-center items-center relative size-70 z-0"

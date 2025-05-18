@@ -4,6 +4,7 @@ import Contact from '@/components/Contact'
 import { Hero } from '@/components/Hero'
 import Hero2 from '@/components/Hero2'
 import { Portfolio } from '@/components/Portfolio'
+import Test from '@/components/Test'
 import { createFileRoute } from '@tanstack/react-router'
 import { useEffect } from 'react'
 
@@ -17,8 +18,9 @@ function RouteComponent() {
       return () => console.log('[dashboard] unmounted');
     }, []);
   return (
-    <div className=''>
-    <Hero2/>
+    <div className='relative'>
+    {/* <Hero2/> */}
+    <Test />
     <About2/>
     <Portfolio/>
     <Contact/>
