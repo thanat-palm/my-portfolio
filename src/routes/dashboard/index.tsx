@@ -19,8 +19,8 @@ function RouteComponent() {
     }, []);
   return (
     <div className='relative'>
-    {/* <Hero2/> */}
-    <Test />
+    <Hero/>
+    {/* <Test /> */}
     <About2/>
     <Portfolio/>
     <Contact/>
