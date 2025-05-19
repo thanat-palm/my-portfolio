@@ -1,4 +1,5 @@
-import { delay } from "framer-motion"
+import { delay, scale, spring } from "framer-motion"
+import { filter } from "framer-motion/client"
 
 export const contactVariants = {
   contactIn: {
@@ -158,12 +159,15 @@ export const heroVariants = {
       opacity: 0,
     },
     textBtnLoop: {
-        y: [40 , 0 , 0 , -40],
+        y: [20 , 0 , 0, -20 , -20],
+        opacity: [0,1,1,1,0],
+        filter: ["blur(4px)","blur(0px)","blur(0px)","blur(0px)","blur(4px)"],
         transition: { 
-          duration: 5,
-          times: [0,0.1,0.9,1],
-          ease: "easeInOut",
+          duration: 4,
+          times: [0,0.04,0.96,0.99,1],
+          type: 'easeOut',
           repeat: Infinity,
+          
         },
     },
     textLoop: {

@@ -1,4 +1,6 @@
 import { aboutVariants, childUpVariants } from "@/constants/AnimateVariants";
+import { GenericGridService } from "@/utils/components/GenericGridService";
+import { MagicCard } from "@/utils/components/MagicCard";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
@@ -17,16 +19,14 @@ export default function AboutMe() {
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 1.2}}
                 >
-            <img
-                src="https://printler.com/media/photo/176171-1.jpg"
-                alt="Profile"
-                className="size-72 object-cover rounded-full bg-white"
-                />
-            <motion.div 
-                className="size-80 rounded-full shadow-lg bg-gradient-to-r from-primary via-accent to-secondary absolute -z-10"
-                variants={aboutVariants}
-                animate="imageLoop"
-                />
+                <MagicCard gradientSize={300} className="size-80 flex justify-center items-center rounded-full">
+
+                  <img
+                    src="https://printler.com/media/photo/176171-1.jpg"
+                    alt="Profile"
+                    className="size-[312px] object-cover rounded-full bg-white"
+                    />
+                </MagicCard>
             </motion.div>
         </div>
 
