@@ -3,8 +3,8 @@
 
 import { useEffect, useState, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
-import { cn } from '../functions/Merge'
 import { MagicCard } from './MagicCard'
+import { cn } from "../functions/merge";
 
 export const GenericGridService = ({
    children,
@@ -15,10 +15,12 @@ export const GenericGridService = ({
    className?: string
    delay?: number
 }) => {
-   const [isLoad, setIsLoad] = useState<boolean>(false)
-   const [isDesktop, setIsDesktop] = useState(false)
+   const [isLoad, setIsLoad] = useState<boolean>(true)
+   const [isDesktop, setIsDesktop] = useState(true)
 
    useEffect(() => {
+      console.log('isDesktop:', isDesktop); // ตรวจสอบว่า isDesktop ถูกตั้งค่าเป็น true/false
+      console.log('isLoad:', isLoad); // ตรวจสอบว่า isLoad เปลี่ยนเป็น true หรือไม่
       setIsLoad(true)
       const handleResize = () => {
          setIsDesktop(window.innerWidth >= 768)
@@ -40,21 +42,21 @@ export const GenericGridService = ({
          )}
       >
          <motion.div
-            initial={{
-               opacity: isDesktop ? 0 : 1,
-               y: isDesktop ? 80 : 0,
-            }}
-            whileInView={{
-               opacity: 1,
-               y: 0,
-            }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{
-               type: 'keyframes',
-               ease: 'linear',
-               duration: 0.3,
-               delay: delay,
-            }}
+            // initial={{
+            //    opacity: isDesktop ? 0 : 1,
+            //    y: isDesktop ? 80 : 0,
+            // }}
+            // whileInView={{
+            //    opacity: 1,
+            //    y: 0,
+            // }}
+            // viewport={{ once: true, amount: 0.3 }}
+            // transition={{
+            //    type: 'keyframes',
+            //    ease: 'linear',
+            //    duration: 0.3,
+            //    delay: delay,
+            // }}
          >
             <div className="relative">
                {children}

@@ -21,7 +21,7 @@ function RouteComponent() {
     <div className='relative'>
     <Hero/>
     {/* <Test /> */}
-    <About2/>
+    <About/>
     <Portfolio/>
     <Contact/>
     </div>

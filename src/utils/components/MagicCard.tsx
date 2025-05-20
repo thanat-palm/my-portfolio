@@ -2,7 +2,7 @@
 
 import { motion, useMotionTemplate, useMotionValue } from "motion/react";
 import React, { useCallback, useEffect, useRef } from "react";
-import { cn } from "../functions/Merge";
+import { cn } from "../functions/merge";
 
 interface MagicCardProps {
   children?: React.ReactNode;
@@ -82,12 +82,12 @@ export function MagicCard({
           radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px,
           ${gradientFrom}, 
           ${gradientTo}, 
-          var(--color-base-content) 100%
+          var(--color-base-200) 100%
           )
           `,
         }}
       />
-      <div className="absolute inset-10 rounded-[inherit] bg-base-100" />
+      <div className="absolute inset-px rounded-[inherit] bg-base-100" />
       <div className="relative">{children}</div>
     </div>
   );
