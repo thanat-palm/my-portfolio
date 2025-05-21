@@ -18,7 +18,7 @@ function App() {
 
   const {t} = useTranslation();
   return (
-  <div className="w-full h-[100vh] overflow-hidden flex flex-col gap-6 justify-center items-center">
+  <div className="w-screen h-screen flex flex-col gap-6 justify-center items-center">
       <motion.div 
         className=""
         variants={welcomeVariants}

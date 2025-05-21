@@ -1,68 +1,39 @@
-import { bannerLoop, heroVariants } from '@/constants/AnimateVariants'
+import { heroVariants } from '@/constants/AnimateVariants'
+import { WordSwap } from '@/utils/components/WordSwap'
 import { scrollToSection } from '@/utils/functions/Scrolling'
-import { AnimatePresence, useCycle, motion } from 'framer-motion'
+import {  motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const myImg = {
-  heroImg: '/palm2.pngs',          // แก้ path รูปให้ถูกต้อง (ไม่ต้องมี /public)
+  heroImg: '/amen.png',
   bgImg: '/bg/bgmock.png',
 }
 
+const heroWords = ['front-end','developer']
 
 export const Hero = () => {
-  const [showFirst, cycleShowFirst] = useCycle(true, false);
-
-  const handleAnimationComplete = () => {
-    setTimeout(() => {
-      cycleShowFirst();
-    }, 2000);
-  }
-
+  const imageRef = useRef(null);
+  const { scrollY } = useScroll();
+  const x = useTransform(scrollY , [0,600],[0,300]);
+  const rotate = useTransform(scrollY, [0, 500], [0, 20]);
   const { t } = useTranslation();
 
   return (
     <section
       id="hero"
-      className={`w-full mx-auto px-6 flex flex-col min-h-screen bg-[url('/bg/bgmock.png')] bg-cover bg-top bg-no-repeat relative`}
+      className={` mx-auto px-6 flex flex-col min-h-screen rounded-b-[64px] overflow-hidden bg-[url('/bg/bgmock.png')] bg-cover bg-top bg-no-repeat bg-fixed relative`}
     >
       {/* overlay */}
       <div className="absolute inset-0 bg-black/70 z-0"></div>
 
       <div className="flex flex-col-reverse lg:flex-row gap-10 flex-1 z-10">
         {/* left */}
-        <div className="flex-1 space-y-6 lg:pl-10 self-center max-lg:text-center">
+        <div className="flex-1 space-y-6 self-center max-lg:text-center">
           <motion.h1 className="text-5xl font-bold text-primary mb-0 ">
-            Hi, I'm Palm
+            Hi, I'm Palm a
           </motion.h1>
-
-          <AnimatePresence mode="wait">
-            {showFirst ? (
-              <motion.h1
-                variants={bannerLoop}
-                initial="hide"
-                animate="visible"
-                exit="hide"
-                onAnimationComplete={handleAnimationComplete}
-                key="first"
-                className="text-8xl uppercase text-primary"
-              >
-                front-end
-              </motion.h1>
-            ) : (
-              <motion.h1
-                variants={bannerLoop}
-                initial="hide"
-                animate="visible"
-                exit="hide"
-                onAnimationComplete={handleAnimationComplete}
-                key="second"
-                className="text-8xl uppercase text-primary"
-              >
-                developer
-              </motion.h1>
-            )}
-          </AnimatePresence>
-
+          <WordSwap words={heroWords} className='text-8xl uppercase'/>
           <motion.button
             onClick={() => scrollToSection('about')}
             className="btn btn-xl overflow-hidden bg-gradient-to-r from-primary to-error via-secondary text-base-100 border-none rounded-full text-2xl"
@@ -83,10 +54,12 @@ export const Hero = () => {
           <motion.div
             className="flex justify-center items-center min-w-[350px] h-[80vh] overflow-hidden rounded-b-full bg-gradient-to-b from-primary to-base-100 relative"
           >
-            <img
+            <motion.img
               src={myImg.heroImg}
               alt="Profile"
-              className="w-full h-full object-cover absolute -bottom-30 left-0"
+              className="w-full h-full object-cover absolute -bottom-50 left-0 scale-150"
+              ref={imageRef}
+              style={{x , rotate}}
             />
           </motion.div>
 

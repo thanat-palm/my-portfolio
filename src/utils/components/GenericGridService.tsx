@@ -21,6 +21,7 @@ export const GenericGridService = ({
    useEffect(() => {
       console.log('isDesktop:', isDesktop); // ตรวจสอบว่า isDesktop ถูกตั้งค่าเป็น true/false
       console.log('isLoad:', isLoad); // ตรวจสอบว่า isLoad เปลี่ยนเป็น true หรือไม่
+      console.log('window:', window.innerWidth)
       setIsLoad(true)
       const handleResize = () => {
          setIsDesktop(window.innerWidth >= 768)
@@ -42,21 +43,22 @@ export const GenericGridService = ({
          )}
       >
          <motion.div
-            // initial={{
-            //    opacity: isDesktop ? 0 : 1,
-            //    y: isDesktop ? 80 : 0,
-            // }}
-            // whileInView={{
-            //    opacity: 1,
-            //    y: 0,
-            // }}
-            // viewport={{ once: true, amount: 0.3 }}
-            // transition={{
-            //    type: 'keyframes',
-            //    ease: 'linear',
-            //    duration: 0.3,
-            //    delay: delay,
-            // }}
+            initial={{
+               opacity: isDesktop ? 0 : 1,
+               y: isDesktop ? 80 : 0,
+            }}
+            whileInView={{
+               opacity: 1,
+               y: 0,
+            }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+               type: 'keyframes',
+               ease: 'linear',
+               duration: 0.3,
+               delay: delay,
+            }}
+            className='relative'
          >
             <div className="relative">
                {children}

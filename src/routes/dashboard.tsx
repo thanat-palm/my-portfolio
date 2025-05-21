@@ -22,7 +22,7 @@ function DashboardLayout() {
         animate="open"
         exit="closed"
       >
-        <Navbar className='items-center overflow-hidden p-2 bg-transparent backdrop-blur-lg rounded-full border-2 border-primary max-md:hidden'/>
+        <Navbar className='items-center overflow-hidden p-2 bg-base-100/40 backdrop-blur-3xl rounded-full border-2 border-primary max-md:hidden'/>
       </motion.div>
       <Outlet />
       <Footer />

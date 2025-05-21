@@ -46,7 +46,7 @@ if (rootElement && !rootElement.innerHTML) {
   root.render(
     // <StrictMode>
       <ThemeProvider>
-        <RouterProvider router={router} />
+        <RouterProvider router={router}/>
       </ThemeProvider>
     // </StrictMode>,
   )

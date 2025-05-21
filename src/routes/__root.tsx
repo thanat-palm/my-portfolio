@@ -9,7 +9,7 @@ export const Route = createRootRoute({
     const pathname = useRouterState({ select: (s) => s.location.pathname });
 
     return (
-      <div className="relative w-full h-full overflow-hidden">
+      <div className="relative">
         <Outlet />
         {/* <TanStackRouterDevtools /> */}
         <SwitchMenus className="absolute top-2 right-2 rounded-full p-2 z-30 max-md:hidden" />
