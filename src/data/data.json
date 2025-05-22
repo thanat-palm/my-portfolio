@@ -1,0 +1,52 @@
+{
+    "skills": [
+        {
+            "name": "HTML",
+            "category": "web",
+            "link": "https://www.w3schools.com/html/", 
+            "logo": "/skills/html.png"
+        },
+        {
+            "name": "JavaScript", 
+            "category": "web",
+            "link": "https://www.w3schools.com/js/", 
+            "logo": "/public/skills/js.png"
+        },
+        {
+            "name": "Nodejs", 
+            "category": "web",
+            "link": "https://nodejs.org/en", 
+            "logo": "/public/skills/nodejs.png"
+        },
+        {
+            "name": "Vuejs", 
+            "category": "web",
+            "link": "https://vuejs.org/", 
+            "logo": "/public/skills/vuejs.png"
+        },
+        {
+            "name": "React", 
+            "category": "web",
+            "link": "https://react.dev/", 
+            "logo": "/public/skills/react.png"
+        },
+        {
+            "name": "Svelte", 
+            "category": "web",
+            "link": "https://svelte.dev/", 
+            "logo": "/public/skills/svelte.png"
+        },
+        {
+            "name": "Nextjs", 
+            "category": "web",
+            "link": "https://nextjs.org/", 
+            "logo": "/public/skills/nextjs.png"
+        },
+        {
+            "name": "TailwindCSS", 
+            "category": "web",
+            "link": "https://tailwindcss.com/", 
+            "logo": "/public/skills/tailwindcss.png"
+        }
+    ]   
+}

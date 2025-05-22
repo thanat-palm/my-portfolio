@@ -3,8 +3,9 @@ import { GenericGridService } from '@/utils/components/GenericGridService';
 import { MagicCard } from '@/utils/components/MagicCard';
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence, motion } from 'framer-motion'
+import data from '@/data/data.json'
 
-const skillist:Array<string> = ['HTML','JavaScript','Nodejs','Vuejs','React','Svelte','Nextjs','TailwindCSS'];
+const skillist = data.skills;
 
 export const About = () => {
   const {t} = useTranslation();
@@ -13,7 +14,7 @@ export const About = () => {
       <h1 className='text-8xl text-center mb-4 text-primary uppercase'>{t('about-title')}</h1>
       <div className="flex flex-col gap-4 lg:flex-row">
         {/* left */}
-        <div className="flex-1 relative">
+        <div className="flex-2 relative">
           <GenericGridService delay={0.3} className="min-h-[700px]">
             <div className="card">
               <div className="card-body">
@@ -23,16 +24,16 @@ export const About = () => {
                 <MagicCard className='rounded-box border-2 border-base-content/10'>
                   <div className="card">
                     <div className="card-body text-2xl">
-                      
+                      Aspiring to strengthen my coding skills and become proficient in web and application development. My goal is to build and develop my own applications in the future. I am eager to gain hands-on experience in both frontend and backend development and to contribute meaningfully while learning and growing in the tech industry.
                     </div>
                   </div>
                 </MagicCard>
                 <div className="">
                   <ul className=' mt-4'>
                     { skillist.map((list , index) => (
-                      <li key={list} className='text-xl'>
+                      <li key={list.name} className='text-xl'>
                         <h1>
-                          {list}
+                          {list.name}
                         </h1>
                         <div className={index === skillist.length - 1 ? '' : 'divider m-0' }></div>
                       </li>
@@ -86,7 +87,7 @@ export const About = () => {
             <div className="card z-10 group">
               <div className="card-body">
                 <div className="card-title text-3xl">
-                  <h1>smart Block Tech co. ltd</h1>
+                  <h1>Smart Block Tech co. ltd</h1>
                 </div>
                 <div className="text-lg">
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, nisi!</p>
