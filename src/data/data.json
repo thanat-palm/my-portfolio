@@ -2,51 +2,129 @@
     "skills": [
         {
             "name": "HTML",
-            "category": "web",
+            "category": "lang",
             "link": "https://www.w3schools.com/html/", 
             "logo": "/skills/html.png"
         },
         {
             "name": "JavaScript", 
-            "category": "web",
+            "category": "lang",
             "link": "https://www.w3schools.com/js/", 
-            "logo": "/public/skills/js.png"
+            "logo": "/skills/js.png"
         },
         {
-            "name": "Nodejs", 
-            "category": "web",
-            "link": "https://nodejs.org/en", 
-            "logo": "/public/skills/nodejs.png"
+            "name": "CSS", 
+            "category": "lang",
+            "link": "https://www.w3schools.com/css/", 
+            "logo": "/skills/css-3.png"
+        },
+        {
+            "name": "Python",
+            "category": "lang",
+            "link": "https://www.python.org", 
+            "logo": "/skills/python.png"
+        },
+        {
+            "name": "SQL",
+            "category": "lang",
+            "link": "https://www.w3schools.com/sql/", 
+            "logo": "/skills/sql.png"
+        },
+        {
+            "name": "Typescript",
+            "category": "lang",
+            "link": "https://www.typescriptlang.org/",
+            "logo": "/skills/typescript.png"
         },
         {
             "name": "Vuejs", 
-            "category": "web",
+            "category": "framework",
             "link": "https://vuejs.org/", 
-            "logo": "/public/skills/vuejs.png"
+            "logo": "/skills/vuejs.png"
         },
         {
             "name": "React", 
-            "category": "web",
+            "category": "framework",
             "link": "https://react.dev/", 
-            "logo": "/public/skills/react.png"
+            "logo": "/skills/react.png"
         },
         {
             "name": "Svelte", 
-            "category": "web",
+            "category": "framework",
             "link": "https://svelte.dev/", 
-            "logo": "/public/skills/svelte.png"
+            "logo": "/skills/svelte.png"
         },
         {
             "name": "Nextjs", 
-            "category": "web",
+            "category": "framework",
             "link": "https://nextjs.org/", 
-            "logo": "/public/skills/nextjs.png"
+            "logo": "/skills/nextjs.png"
         },
         {
             "name": "TailwindCSS", 
-            "category": "web",
+            "category": "framework",
             "link": "https://tailwindcss.com/", 
-            "logo": "/public/skills/tailwindcss.png"
+            "logo": "/skills/tailwindcss.png"
+        },
+        {
+            "name": "Bootstrap", 
+            "category": "framework",
+            "link": "https://getbootstrap.com/", 
+            "logo": "/skills/bootstrap.png"
+        },
+        {
+            "name": "Vite", 
+            "category": "tool",
+            "link": "https://vite.dev/", 
+            "logo": "/skills/vitejs.png"
+        },
+        {
+            "name": "Docker", 
+            "category": "tool",
+            "link": "https://www.docker.com/", 
+            "logo": "/skills/docker.png"
+        },
+        {
+            "name": "XAMPP", 
+            "category": "tool",
+            "link": "https://www.apachefriends.org/", 
+            "logo": "/skills/xampp.png"
+        },
+        {
+            "name": "GitHub", 
+            "category": "tool",
+            "link": "https://github.com/", 
+            "logo": "/skills/github.png"
+        },
+        {
+            "name": "GitLab", 
+            "category": "tool",
+            "link": "https://about.gitlab.com/", 
+            "logo": "/skills/gitlab.png"
+        },
+        {
+            "name": "Figma", 
+            "category": "tool",
+            "link": "https://www.figma.com/", 
+            "logo": "/skills/figma.png"
+        },
+        {
+            "name": "Postman", 
+            "category": "tool",
+            "link": "https://www.postman.com/", 
+            "logo": "/skills/postman.png"
+        },
+        {
+            "name": "MySQL", 
+            "category": "database",
+            "link": "https://www.mysql.com/", 
+            "logo": "/skills/mysql.png"
+        },
+        {
+            "name": "MongoDB", 
+            "category": "database",
+            "link": "https://www.mongodb.com/", 
+            "logo": "/skills/mongdb.png"
         }
     ]   
 }

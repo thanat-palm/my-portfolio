@@ -1,13 +1,20 @@
 
+'use client'
 import { GenericGridService } from '@/utils/components/GenericGridService';
 import { MagicCard } from '@/utils/components/MagicCard';
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence, motion } from 'framer-motion'
 import data from '@/data/data.json'
+import { FolderCard } from './SkillCard';
+import { SkillModal } from './SkillModal';
+import { skillData } from '@/data/TSdata';
+import { useState } from 'react';
 
 const skillist = data.skills;
 
 export const About = () => {
+  const [selected, setSelected] = useState<null | "language" | "framework" | "tool">(null);
+  
   const {t} = useTranslation();
   return (
     <section id="about" className="w-full max-w-6xl mx-auto px-6 py-20 gap-10 bg-base-100 min-h-screen">
@@ -15,7 +22,7 @@ export const About = () => {
       <div className="flex flex-col gap-4 lg:flex-row">
         {/* left */}
         <div className="flex-2 relative">
-          <GenericGridService delay={0.3} className="min-h-[700px]">
+          <GenericGridService delay={0.3} >
             <div className="card">
               <div className="card-body">
                 <div className="card-title text-6xl">
@@ -28,31 +35,40 @@ export const About = () => {
                     </div>
                   </div>
                 </MagicCard>
-                <div className="">
-                  <ul className=' mt-4'>
-                    { skillist.map((list , index) => (
-                      <li key={list.name} className='text-xl'>
-                        <h1>
-                          {list.name}
-                        </h1>
-                        <div className={index === skillist.length - 1 ? '' : 'divider m-0' }></div>
-                      </li>
-                    ))
-                    }
-                  </ul>
-                </div>
                 <div className="card-actions">
-                  <button className=' btn btn-soft btn-lg text-xl transition-all duration-300 rounded-full'>resume</button>
+                  <button className=' btn btn-soft btn-lg text-xl transition-all duration-300 rounded-box'>My Resume</button>
                 </div>
               </div>
             </div>
-              <motion.img 
-                src="/amen.png" 
-                alt="avatar" 
-                className='absolute bottom-0 right-0 w-md translate-y-2/5 translate-x-1/4'
-                initial={{scale:1 ,y:0}}
-                whileHover={{scale:1.1 , y:-50}}
-              />
+            <div className="divider w-9/10 justify-self-center"></div>
+            <div className="card-body flex flex-col items-center justify-center gap-4">
+                  <h1 className="text-6xl w-full">Skills</h1>
+            
+                  <div className="flex flex-col sm:flex-row gap-6">
+                    <FolderCard
+                    title="Language"
+                    onClick={() => setSelected("language")}
+                    isActive={selected === "language"}
+                    />
+                    <FolderCard
+                    title="Framework"
+                    onClick={() => setSelected("framework")}
+                    isActive={selected === "framework"}
+                    />
+                    <FolderCard
+                    title="Tool"
+                    onClick={() => setSelected("tool")}
+                    isActive={selected === "tool"}
+                    />      
+                  </div>
+            
+                  <SkillModal
+                    isOpen={selected !== null}
+                    onClose={() => setSelected(null)}
+                    title={`My ${selected?.toUpperCase()} Skills`}
+                    skills={selected ? skillData[selected] : []}
+                  />
+                </div>
           </GenericGridService>
         </div>
         {/* right */}
