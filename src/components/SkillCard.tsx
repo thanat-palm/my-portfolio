@@ -10,8 +10,6 @@ interface Props {
 export const FolderCard: React.FC<Props> = ({ title, onClick, isActive = false }) => {
   const [hovered, setHovered] = useState(false);
 
-  const showHover = hovered || isActive ; // ใช้ตัวแปรนี้แทน
-
   return (
     <motion.div
       className="relative w-48 h-36 cursor-pointer"
@@ -30,13 +28,13 @@ export const FolderCard: React.FC<Props> = ({ title, onClick, isActive = false }
       >
         <path
           d="M0 0c0-1.1.9-2 2-2h22l4 4h28c1.1 0 2 .9 2 2v33c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V0z"
-          fill="var(--color-secondary)"
+          fill="var(--color-primary-content)"
         />
       </motion.svg>
 
       {/* Paper */}
       <motion.div
-        className="absolute top-4 left-2 w-44 h-30 bg-secondary-content rounded shadow-xl z-10"
+        className="absolute top-4 left-2 w-44 h-30 bg-base-100 rounded shadow-xl z-10 outline outline-accent"
         animate={isActive || hovered ? {y: -18} : {y: 0}}
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
       />
@@ -50,9 +48,9 @@ export const FolderCard: React.FC<Props> = ({ title, onClick, isActive = false }
       >
         <path
           d="M0 7c0-1.1.9-2 2-2h56c1.1 0 2 .9 2 2v33c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V7z"
-          fill="var(--color-secondary)"
+          fill="var(--color-primary)"
         />
-        <text x="5%" y="95%" fill="var(--color-secondary-content)" fontSize="12">
+        <text x="5%" y="95%" fill="var(--color-primary-content)" fontSize="12">
           {title}
         </text>
       </motion.svg>

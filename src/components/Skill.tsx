@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { FolderCard } from "./SkillCard";
 import { SkillModal } from "./SkillModal";
-import { skillData } from "@/data/TSdata";
+import skillsData from "@/data/data.json"
+
 
 export const SkillSection = () =>  {
   const [selected, setSelected] = useState<null | "language" | "framework" | "tool">(null);
-
+  
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-8 p-8 text-primary">
       <h1 className="text-8xl mb-8 uppercase">Skills</h1>
@@ -32,7 +33,7 @@ export const SkillSection = () =>  {
         isOpen={selected !== null}
         onClose={() => setSelected(null)}
         title={`My ${selected?.toUpperCase()} Skills`}
-        skills={selected ? skillData[selected] : []}
+        skills={selected ? skillsData.skills : []}
       />
     </div>
   );
