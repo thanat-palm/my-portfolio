@@ -31,7 +31,7 @@ export const SkillModal: React.FC<Props> = ({ isOpen, onClose, title, skills }) 
               <button onClick={onClose} className="text-error font-bold text-xl btn btn-circle"><IoMdClose /></button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 overflow-y-auto max-h-[80vh]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {skills.filter((skill) => title === skill.category ).map((skill, index) => (
                 <motion.a
                   key={skill.title}
@@ -42,11 +42,11 @@ export const SkillModal: React.FC<Props> = ({ isOpen, onClose, title, skills }) 
                   href={skill.link}
                 >
                   <div className="flex-1">
-                    <div className="rounded-full bg-white w-fit p-2 sm:p-3">
-                      <img src={skill.logo} alt={skill.title} className="size-6 sm:size-8"/>
+                    <div className="rounded-full bg-white w-fit p-3">
+                      <img src={skill.logo} alt={skill.title} className="size-8"/>
                     </div>
                   </div>
-                  <h4 className="flex-1 uppercase text-lg sm:text-xl">{skill.title}</h4>
+                  <h4 className="flex-1 uppercase text-xl">{skill.title}</h4>
                   <FaExternalLinkAlt className="absolute bottom-2 right-2"/>
                 </motion.a>
               ))}

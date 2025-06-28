@@ -4,7 +4,7 @@
   "about": "ฉันคือใคร ?",
   "portfolio": "ผลงาน",
   "contact": "ติดต่อ",
-  "click_to_dashboard": "คลิกเพื่อไปที่แดชบอร์ด",
+  "click_to_dashboard": "คลิกเพื่อไปที่หน้าหลัก",
   "click": "คลิก",
   "scroll": "เลื่อนจอเพื่อไปต่อ",
   "hero-title": "Developer",
@@ -12,8 +12,8 @@
   "about-subtitle": "สวัสดีครับ ผมเป็นนักพัฒนาซอฟต์แวร์ที่ชื่นชอบการสร้างระบบที่มีประสิทธิภาพ ใช้งานง่าย และตอบโจทย์ผู้ใช้ เน้นทั้งฝั่ง Frontend และ Backend ด้วยเทคโนโลยี ที่ทันสมัย พร้อมเรียนรู้สิ่งใหม่ตลอดเวลา",
   "categories-all": "ทั้งหมด",
   "categories-1": "เว็บไซต์",
-  "categories-2": "มือถือ",
-  "categories-3": "ออกแบบ",
+  "categories-2": "แลนดิ้งเพจ",
+  "categories-3": "มือถือ",
   "contact-title": "ติดต่อฉัน",
   "contact-subtitle": "มีคำถามหรือต้องการร่วมงานกันใช่ไหม? กรอกแบบฟอร์มหรือส่งข้อความหาเราโดยตรงได้เลย",
   "form-name": "ชื่อ",
@@ -23,5 +23,4 @@
   "placeholder-name": "ชื่อของคุณ",
   "placeholder-email": "you@example.com",
   "placeholder-message": "พิมข้อความของคุณ..."
-
 }

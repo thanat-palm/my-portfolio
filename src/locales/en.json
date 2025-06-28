@@ -4,7 +4,7 @@
   "about": "About me",
   "portfolio": "Portfolio",
   "contact": "Contact",
-  "click_to_dashboard": "Click to go dashboard",
+  "click_to_dashboard": "Click to go home page",
   "click": "Click",
   "scroll": "Scroll to Continue",
   "hero-title": "Developer",
@@ -13,8 +13,8 @@
   "about-subtitle": "I'm a passionate full-stack developer specializing in Vue.js, React, and Node.js. I love crafting intuitive user experiences and building efficient web systems.",
   "categories-all": "All",
   "categories-1": "Web",
-  "categories-2": "Mobile",
-  "categories-3": "Design",
+  "categories-2": "Landing page",
+  "categories-3": "Mobile",
   "contact-title": "Let's Get In Touch",
   "contact-subtitle": "Have a question or want to work together? Fill out the form below or reach me directly.",
   "form-name": "Name",
@@ -24,5 +24,4 @@
   "placeholder-name": "Your name",
   "placeholder-email": "you@example.com",
   "placeholder-message": "Type your message..."
-
 }

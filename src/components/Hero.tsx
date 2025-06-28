@@ -52,13 +52,18 @@ export const Hero = () => {
         </div>
         <div className="divider divider-horizontal"></div>
         <div className="text-center">
-          <h3 className="text-4xl md:text-6xl text-secondary">200+</h3>
-          <p className="text-gray-600">Projects Completed</p>
+          <h3 className="text-4xl md:text-6xl text-secondary">5+</h3>
+          <p className="text-gray-600">Framework</p>
         </div>
         <div className="divider divider-horizontal"></div>
         <div className="text-center">
-          <h3 className="text-4xl md:text-6xl text-secondary">98%</h3>
-          <p className="text-gray-600">Client Satisfaction</p>
+          <h3 className="text-4xl md:text-6xl text-secondary">5+</h3>
+          <p className="text-gray-600">Language</p>
+        </div>
+        <div className="divider divider-horizontal"></div>
+        <div className="text-center">
+          <h3 className="text-4xl md:text-6xl text-secondary">6+</h3>
+          <p className="text-gray-600">Tools</p>
         </div>
       </div>
     </section>

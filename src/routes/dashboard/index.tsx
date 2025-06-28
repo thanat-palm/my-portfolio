@@ -17,7 +17,6 @@ function RouteComponent() {
   return (
     <div className='relative'>
     <Hero/>
-    {/* <Test /> */}
     <About/>
     <Portfolio/>
     <Contact/>
