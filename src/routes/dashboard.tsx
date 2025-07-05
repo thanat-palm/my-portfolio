@@ -16,13 +16,13 @@ function DashboardLayout() {
     <div className=''>
       <Sidebar className="fixed z-30 h-full md:hidden"/>
       <motion.div 
-        className='flex left-2 lg:left-0 lg:justify-center w-full fixed top-2 z-30' 
+        className='flex left-0 justify-center w-full fixed top-2 z-30' 
         variants={navVariants} 
         initial="closed"
         animate="open"
         exit="closed"
       >
-        <Navbar className='items-center overflow-hidden p-2 bg-base-100/40 backdrop-blur-3xl rounded-full border-2 border-primary max-md:hidden'/>
+        <Navbar className='items-center overflow-hidden p-2 bg-base-100/40 backdrop-blur-3xl rounded-full border-2 border-primary max-lg:hidden'/>
       </motion.div>
       <Outlet />
       <Footer />

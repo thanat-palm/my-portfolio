@@ -3,11 +3,24 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { PortfolioCard } from './PortfolioCard'
 import { childUpVariants, PortfolioVariants } from '@/constants/AnimateVariants'
 import { useTranslation } from 'react-i18next'
-import { portfolioItems } from '@/data/TSdata'
+import { portfolioItems, type PortfolioItem } from '@/data/TSdata'
+import { PortfolioModal } from './PortfolioModal'
 
 export function Portfolio() {
   const { t } = useTranslation();
   const [active, setActive] = useState('All');
+  const [isPortModal , setIsPortModal] = useState(false);
+  const [portData , setPortData] = useState<PortfolioItem>();
+  const data = [...portfolioItems];
+
+  const handleOpenModal = (portId: number) => {
+    console.log("Type of data:", typeof data);
+    if(!data || !Array.isArray(data)) return;
+    const filterData = data.find((d) => d.id === portId);
+    console.log(filterData)
+    setPortData(filterData);
+    setIsPortModal(true);
+  }
 
   const categories = [
     { title: t('categories-all'), value: 'All' },
@@ -58,7 +71,7 @@ export function Portfolio() {
         variants={PortfolioVariants}
         initial="itemOut"
         whileInView="itemIn"
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
       >
         <AnimatePresence>
           {filteredItems.map((item) => (
@@ -67,13 +80,14 @@ export function Portfolio() {
               layout
               whileHover={{ scale: 1.05 }}
             >
-              <button className='w-full h-full text-start relative' >
+              <button className='w-full h-full text-start relative' onClick={() => handleOpenModal(item.id)}>
                 <PortfolioCard title={item.title} image={item.image} />
               </button>
             </motion.div>
           ))}
         </AnimatePresence>
       </motion.div>
+      <PortfolioModal isOpen={isPortModal} onClose={() => setIsPortModal(false)} skills={portData}/> 
     </section>
   )
 }

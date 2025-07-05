@@ -1,6 +1,3 @@
-import { delay, scale, spring } from "framer-motion"
-import { filter } from "framer-motion/client"
-
 export const contactVariants = {
   contactIn: {
     opacity: 1,

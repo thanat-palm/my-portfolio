@@ -31,22 +31,22 @@ export const SkillModal: React.FC<Props> = ({ isOpen, onClose, title, skills }) 
               <button onClick={onClose} className="text-error font-bold text-xl btn btn-circle"><IoMdClose /></button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 overflow-y-auto max-h-[80vh]">
+            <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 overflow-y-auto max-h-[80vh] py-4">
               {skills.filter((skill) => title === skill.category ).map((skill, index) => (
                 <motion.a
                   key={skill.title}
-                  className="p-4 relative rounded-md bg-base-200 shadow-md hover:shadow-xl flex items-center transition-all hover:-translate-y-1 duration-200 ease-in-out"
+                  className="p-2 sm:p-4 relative gap-2 rounded-md bg-base-200 shadow-md hover:shadow-xl flex max-sm:flex-col max-sm:justify-center items-center transition-all hover:-translate-y-1 duration-200 ease-in-out"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   href={skill.link}
                 >
-                  <div className="flex-1">
+                  <div className="">
                     <div className="rounded-full bg-white w-fit p-2 sm:p-3">
-                      <img src={skill.logo} alt={skill.title} className="size-6 sm:size-8"/>
+                      <img src={skill.logo} alt={skill.title} className="size-4 sm:size-8"/>
                     </div>
                   </div>
-                  <h4 className="flex-1 uppercase text-lg sm:text-xl">{skill.title}</h4>
+                  <h4 className=" uppercase sm:text-xl">{skill.title}</h4>
                   <FaExternalLinkAlt className="absolute bottom-2 right-2"/>
                 </motion.a>
               ))}

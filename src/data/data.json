@@ -4,127 +4,127 @@
             "title": "HTML",
             "category": "language",
             "link": "https://www.w3schools.com/html/", 
-            "logo": "/public/skills/html.png"
+            "logo": "/skills/html.png"
         },
         {
             "title": "JavaScript", 
             "category": "language",
             "link": "https://www.w3schools.com/js/", 
-            "logo": "/public/skills/js.png"
+            "logo": "/skills/js.png"
         },
         {
             "title": "CSS", 
             "category": "language",
             "link": "https://www.w3schools.com/css/", 
-            "logo": "/public/skills/css-3.png"
+            "logo": "/skills/css-3.png"
         },
         {
             "title": "Python",
             "category": "language",
             "link": "https://www.python.org", 
-            "logo": "/public/skills/python.png"
+            "logo": "/skills/python.png"
         },
         {
             "title": "SQL",
             "category": "language",
             "link": "https://www.w3schools.com/sql/", 
-            "logo": "/public/skills/sql.png"
+            "logo": "/skills/sql.png"
         },
         {
             "title": "Typescript",
             "category": "language",
             "link": "https://www.typescriptlanguage.org/",
-            "logo": "/public/skills/typescript.png"
+            "logo": "/skills/typescript.png"
         },
         {
             "title": "Vuejs", 
             "category": "framework",
             "link": "https://vuejs.org/", 
-            "logo": "/public/skills/vuejs.png"
+            "logo": "/skills/vuejs.png"
         },
         {
             "title": "React", 
             "category": "framework",
             "link": "https://react.dev/", 
-            "logo": "/public/skills/react.png"
+            "logo": "/skills/react.png"
         },
         {
             "title": "Svelte", 
             "category": "framework",
             "link": "https://svelte.dev/", 
-            "logo": "/public/skills/svelte.png"
+            "logo": "/skills/svelte.png"
         },
         {
             "title": "Nextjs", 
             "category": "framework",
             "link": "https://nextjs.org/", 
-            "logo": "/public/skills/nextjs.png"
+            "logo": "/skills/nextjs.png"
         },
         {
             "title": "TailwindCSS", 
             "category": "framework",
             "link": "https://tailwindcss.com/", 
-            "logo": "/public/skills/tailwindcss.png"
+            "logo": "/skills/tailwindcss.png"
         },
         {
             "title": "Bootstrap", 
             "category": "framework",
             "link": "https://getbootstrap.com/", 
-            "logo": "/public/skills/bootstrap.png"
+            "logo": "/skills/bootstrap.png"
         },
         {
             "title": "Vite", 
             "category": "tool",
             "link": "https://vite.dev/", 
-            "logo": "/public/skills/vitejs.png"
+            "logo": "/skills/vitejs.png"
         },
         {
             "title": "Docker", 
             "category": "tool",
             "link": "https://www.docker.com/", 
-            "logo": "/public/skills/docker.png"
+            "logo": "/skills/docker.png"
         },
         {
             "title": "XAMPP", 
             "category": "tool",
             "link": "https://www.apachefriends.org/", 
-            "logo": "/public/skills/xampp.png"
+            "logo": "/skills/xampp.png"
         },
         {
             "title": "GitHub", 
             "category": "tool",
             "link": "https://github.com/", 
-            "logo": "/public/skills/github.png"
+            "logo": "/skills/github.png"
         },
         {
             "title": "GitLab", 
             "category": "tool",
             "link": "https://about.gitlab.com/", 
-            "logo": "/public/skills/gitlab.png"
+            "logo": "/skills/gitlab.png"
         },
         {
             "title": "Figma", 
             "category": "tool",
             "link": "https://www.figma.com/", 
-            "logo": "/public/skills/figma.png"
+            "logo": "/skills/figma.png"
         },
         {
             "title": "Postman", 
             "category": "tool",
             "link": "https://www.postman.com/", 
-            "logo": "/public/skills/postman.png"
+            "logo": "/skills/postman.png"
         },
         {
             "title": "MySQL", 
             "category": "database",
             "link": "https://www.mysql.com/", 
-            "logo": "/public/skills/mysql.png"
+            "logo": "/skills/mysql.png"
         },
         {
             "title": "MongoDB", 
             "category": "database",
             "link": "https://www.mongodb.com/", 
-            "logo": "/public/skills/mongdb.png"
+            "logo": "/skills/mongdb.png"
         }
     ],
     "working": [
@@ -149,7 +149,7 @@
             "subtitle": "Front-End Developer",
             "year": "2024-2025",
             "description": "Developed and maintained frontend systems for websites and applications. Implemented key functionalities including login systems, permission management, and payment processing. Collaborated with backend and design teams to deliver efficient and user-friendly solutions.",
-            "logo": "/public/sbt.jpg",
+            "logo": "/sbt.jpg",
             "link": "https://smartblocktech.ai/"
         }
     ]
