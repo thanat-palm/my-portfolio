@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const Carousel = () => {
   return (
 <div className="carousel rounded-box w-128 h-96">

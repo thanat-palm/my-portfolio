@@ -1,8 +1,6 @@
 import React from 'react'
 import { useMotionTemplate, useMotionValue, motion } from 'framer-motion'
-import { cn } from '../functions/Merge'
-const root = getComputedStyle(document.documentElement);
-const primary = root.getPropertyValue('--p') || '59 130 246'; // fallback
+import { cn } from '../functions/merge'
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 

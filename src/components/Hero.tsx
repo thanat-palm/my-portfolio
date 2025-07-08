@@ -1,7 +1,7 @@
 import { heroVariants } from '@/constants/AnimateVariants'
 import { WordSwap } from '@/utils/components/WordSwap'
 import { scrollToSection } from '@/utils/functions/Scrolling'
-import {  motion, useScroll, useTransform } from 'framer-motion'
+import {  motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
 const heroWords = ['front-end','developer']

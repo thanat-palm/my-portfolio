@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FolderCard } from "./SkillCard";
 import { SkillModal } from "./SkillModal";
 import skillsData from "@/data/data.json"

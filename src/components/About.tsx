@@ -3,7 +3,6 @@
 import { GenericGridService } from '@/utils/components/GenericGridService';
 import { MagicCard } from '@/utils/components/MagicCard';
 import { useTranslation } from 'react-i18next'
-import { AnimatePresence, motion } from 'framer-motion'
 import { FolderCard } from './SkillCard';
 import { SkillModal } from './SkillModal';
 import myData from "@/data/data.json"

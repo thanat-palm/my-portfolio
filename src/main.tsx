@@ -1,4 +1,3 @@
-import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import i18n from './locales/i18n.ts'
@@ -44,11 +43,9 @@ const rootElement = document.getElementById('app')
 if (rootElement && !rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
-    // <StrictMode>
       <ThemeProvider>
         <RouterProvider router={router}/>
       </ThemeProvider>
-    // </StrictMode>,
   )
 }
 
