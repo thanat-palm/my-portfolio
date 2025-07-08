@@ -28,7 +28,7 @@ export const PortfolioModal: React.FC<Props> = ({ isOpen, onClose, skills }) => 
           >
             <button onClick={onClose} className="text-error font-bold btn absolute top-1 right-1 btn-circle"><IoMdClose/></button>
             <div className="flex max-sm:flex-col">
-                <div className="flex-1">
+                <div className="flex-1 flex items-center">
                   <a href={skills?.link} target="_blank" rel="noopener noreferrer" className="w-fit max-sm:mx-auto shadow-lg group/portImg relative">
                     <div className="w-full h-full rounded-box group-hover/portImg:bg-black/50 transition-all duration-300 ease-in-out flex items-center justify-center absolute z-20 top-0 left-0 gap-2 text-[0px] group-hover/portImg:text-xl"><FaExternalLinkAlt />Link</div>
                     <img src={skills?.image} alt={skills?.title} className="rounded-box w-full"/>

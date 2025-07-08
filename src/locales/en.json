@@ -23,5 +23,10 @@
   "form-message-sent": "Send Message",
   "placeholder-name": "Your name",
   "placeholder-email": "you@example.com",
-  "placeholder-message": "Type your message..."
+  "placeholder-message": "Type your message...",
+  "project1Description": "This is my first portfolio web app, built with React JS. It grabs attention with cool Tilt effects on images and awesome Type-Animation for text.",
+  "project2Description": "This is a web application designed to mimic an e-commerce platform. It features the ability to display product listings by fetching data via API integration, alongside comprehensive search capabilities for easy product discovery.",
+  "project3Description": "This web application is designed with a comprehensive user management system, including registration and login functionalities. It utilizes Next.js as the core framework, integrating Next-Auth for authentication, bcryptjs for secure password hashing, and Mongoose for database connectivity.",
+  "project4Description": "This is my current portfolio web app, showcasing my work experience with a rich set of features: multi-language support (i18n), state management with Zustand, beautiful UI design using DaisyUI, engaging animations from Framer Motion, and a contact form system integrated via Formspree.",
+  "project5Description": "This web application is developed to extract text from images, utilizing the EasyOCR library and Python for backend processing, and displaying the results on the website via API integration."
 }

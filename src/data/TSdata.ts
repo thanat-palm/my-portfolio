@@ -37,8 +37,8 @@ export const portfolioItems:PortfolioItem[] = [
       title: 'Portfolio Website Workshop',
       category: 'LandingPage',
       image:
-        'https://cdn.dribbble.com/userupload/18060197/file/original-7aa360ec7102e8d9cb431d35739d7e38.png?crop=0x0-2400x1800&format=webp&resize=400x300&vertical=center',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, sed.',
+        '/port/workshop.png',
+      description: 'This is my first portfolio web app, built with React JS. It grabs attention with cool Tilt effects on images and awesome Type-Animation for text.',
       tool: [
         {title:'React', logo: '/skills/react.png'},
         {title:'JavaScript', logo: '/skills/js.png'},
@@ -50,8 +50,8 @@ export const portfolioItems:PortfolioItem[] = [
       title: 'Shopping Website',
       category: 'LandingPage',
       image:
-        'https://cdn.dribbble.com/userupload/42451716/file/original-5c0a330e52ea14c68abe2475338c617f.png?format=webp&resize=400x300&vertical=center',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure excepturi accusamus perspiciatis.',
+        '/port/shopping-web.png',
+      description: 'This is a web application designed to mimic an e-commerce platform. It features the ability to display product listings by fetching data via API integration, alongside comprehensive search capabilities for easy product discovery.',
       tool: [
         {title:'Nextjs', logo: '/skills/nextjs.png'},
         {title:'TypeScript', logo: '/skills/typescript.png'},
@@ -64,8 +64,8 @@ export const portfolioItems:PortfolioItem[] = [
       title: 'Login App',
       category: 'Web',
       image:
-        'https://cdn.dribbble.com/userupload/20811320/file/original-28f79681a1d95e55b9827a1a907a8062.png?crop=0x0-1600x1200&format=webp&resize=400x300&vertical=center',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur alias quia ipsam suscipit at vitae.',
+        '/port/login-app.png',
+      description: 'This web application is designed with a comprehensive user management system, including registration and login functionalities. It utilizes Next.js as the core framework, integrating Next-Auth for authentication, bcryptjs for secure password hashing, and Mongoose for database connectivity.',
       tool: [
         {title:'Nextjs', logo: '/skills/nextjs.png'},
         {title:'TypeScript', logo: '/skills/typescript.png'},
@@ -79,8 +79,8 @@ export const portfolioItems:PortfolioItem[] = [
       title: 'New Portfolio Website',
       category: 'Web',
       image:
-        'https://cdn.dribbble.com/userupload/17505394/file/original-c7493ca8f98b6ddcfa387646b014a07d.jpg?format=webp&resize=400x300&vertical=center',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, sed.',
+        '/port/portfolio.png',
+      description: 'This is my current portfolio web app, showcasing my work experience with a rich set of features: multi-language support (i18n), state management with Zustand, beautiful UI design using DaisyUI, engaging animations from Framer Motion, and a contact form system integrated via Formspree.',
       tool: [
         {title:'React', logo: '/skills/react.png'},
         {title:'TypeScript', logo: '/skills/typescript.png'},
@@ -93,11 +93,14 @@ export const portfolioItems:PortfolioItem[] = [
       title: 'Get With easyOCR',
       category: 'Web',
       image:
-        'https://cdn.dribbble.com/userupload/17505394/file/original-c7493ca8f98b6ddcfa387646b014a07d.jpg?format=webp&resize=400x300&vertical=center',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure excepturi accusamus perspiciatis.',
+        '/port/easyOCR.png',
+      description: 'This web application is developed to extract text from images, utilizing the EasyOCR library and Python for backend processing, and displaying the results on the website via API integration.',
       tool: [
-
+        {title:'React', logo: '/skills/react.png'},
+        {title:'TypeScript', logo: '/skills/typescript.png'},
+        {title:'TailwindCSS', logo: '/skills/tailwindcss.png'},
+        {title:'Python', logo: '/skills/python.png'}
       ],
-      link: '',
+      link: 'https://github.com/thanat-palm/webApp_with_easyORC.git',
     },
 ]

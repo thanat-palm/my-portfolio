@@ -2,13 +2,7 @@ import { heroVariants } from '@/constants/AnimateVariants'
 import { WordSwap } from '@/utils/components/WordSwap'
 import { scrollToSection } from '@/utils/functions/Scrolling'
 import {  motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-
-const myImg = {
-  heroImg: '/amen.png',
-  bgImg: '/bg/bgmock.png',
-}
 
 const heroWords = ['front-end','developer']
 
@@ -18,7 +12,7 @@ export const Hero = () => {
   return (
     <section
       id="hero"
-      className={` mx-auto px-6 flex flex-col min-h-screen rounded-b-[64px] overflow-hidden bg-[url('/bg/bgmock.png')] bg-cover bg-top bg-no-repeat bg-fixed relative`}
+      className={` mx-auto px-6 flex flex-col min-h-screen rounded-b-[64px] overflow-hidden bg-[url('/bg/palm.png')] bg-cover bg-top bg-no-repeat bg-fixed relative`}
     >
       {/* overlay */}
       <div className="absolute inset-0 bg-black/70 z-0"></div>
