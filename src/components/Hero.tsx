@@ -12,7 +12,7 @@ export const Hero = () => {
   return (
     <section
       id="hero"
-      className={` mx-auto sm:px-6 flex flex-col min-h-screen rounded-b-[64px] overflow-hidden bg-[url('/bg/palm.png')] bg-cover bg-top bg-no-repeat bg-fixed relative`}
+      className={` mx-auto sm:px-6 flex flex-col min-h-screen rounded-b-[64px] overflow-hidden bg-[url('/bg/palm.png')] bg-cover bg-top bg-no-repeat bg-scroll md:bg-fixed relative`}
     >
       {/* overlay */}
       <div className="absolute inset-0 bg-black/70 z-0"></div>
