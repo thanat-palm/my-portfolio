@@ -24,11 +24,10 @@ export const Navbar = ({className,onSectionClick}: NavbarProps) => {
 
   return (
     <div className={className}>
-          <Link to="/" className='btn btn-ghost btn-secondary lg:btn-xl btn-lg rounded-full lg:max-sm:rounded-r-full max-md:w-full max-md:text-4xl max-lg:text-lg text-2xl max-md:btn-soft '>{t('welcome')}</Link>
-          <button onClick={HandleTopClick} className='btn btn-ghost btn-primary btn-lg lg:btn-xl rounded-full max-md:w-full max-md:btn-soft max-md:text-4xl max-lg:text-lg text-2xl'>{t('home')}</button>
-          <button onClick={() => HandleSectionClick('about')} className='btn btn-ghost btn-primary btn-lg lg:btn-xl rounded-full max-md:w-full  max-md:btn-soft max-md:text-4xl max-lg:text-lg text-2xl' >{t('about')}</button>
-          <button onClick={() => HandleSectionClick('portfolio')} className='btn btn-ghost btn-primary btn-lg lg:btn-xl rounded-full max-md:w-full max-md:btn-soft max-md:text-4xl max-lg:text-lg text-2xl' >{t('portfolio')}</button>
-          <button onClick={() => HandleSectionClick('contact')} className='btn btn-ghost btn-primary btn-lg lg:btn-xl rounded-full max-md:w-full max-md:btn-soft max-md:text-4xl max-lg:text-lg text-2xl' >{t('contact')}</button>
+          <button onClick={HandleTopClick} className='btn btn-ghost btn-primary btn-lg lg:btn-xl rounded-full max-md:w-full max-md:btn-soft text-lg sm:text-2xl md::text-lg lg:text-2xl'>{t('home')}</button>
+          <button onClick={() => HandleSectionClick('about')} className='btn btn-ghost btn-primary btn-lg lg:btn-xl rounded-full max-md:w-full  max-md:btn-soft text-lg sm:text-2xl md::text-lg lg:text-2xl' >{t('about')}</button>
+          <button onClick={() => HandleSectionClick('portfolio')} className='btn btn-ghost btn-primary btn-lg lg:btn-xl rounded-full max-md:w-full max-md:btn-soft text-lg sm:text-2xl md::text-lg lg:text-2xl' >{t('portfolio')}</button>
+          <button onClick={() => HandleSectionClick('contact')} className='btn btn-ghost btn-primary btn-lg lg:btn-xl rounded-full max-md:w-full max-md:btn-soft text-lg sm:text-2xl md::text-lg lg:text-2xl' >{t('contact')}</button>
     </div>
   )
 }

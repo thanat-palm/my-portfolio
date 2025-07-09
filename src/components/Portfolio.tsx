@@ -32,9 +32,9 @@ export function Portfolio() {
   const filteredItems = active === 'All' ? portfolioItems : portfolioItems.filter((item) => item.category === active)
 
   return (
-    <section id="portfolio" className="max-w-7xl mx-auto px-6 sm:px-10 md:px-20 py-28">
+    <section id="portfolio" className="max-w-7xl mx-auto px-2 sm:px-10 md:px-20 py-28">
       <motion.h1
-        className="text-7xl sm:text-8xl font-extrabold text-center mb-16 text-primary"
+        className="text-6xl sm:text-8xl font-extrabold text-center text-primary"
         variants={PortfolioVariants}
         initial="titleOut"
         whileInView="titleIn"
@@ -44,7 +44,7 @@ export function Portfolio() {
 
       {/* Filter Tabs */}
       <motion.div
-        className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-16"
+        className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-16"
         variants={PortfolioVariants}
         initial="childOut"
         whileInView="childIn"
@@ -54,7 +54,7 @@ export function Portfolio() {
             key={cat.value}
             variants={childUpVariants}
             onClick={() => setActive(cat.value)}
-            className={`rounded-full badge badge-lg sm:badge-xl py-4 px-5 sm:py-6 sm:px-7 text-2xl sm:text-3xl font-medium ${
+            className={`rounded-full badge badge-lg sm:badge-xl py-4 px-5 sm:py-6 sm:px-7 sm:text-3xl font-medium ${
               active === cat.value
                 ? 'bg-primary text-primary-content border-primary'
                 : 'bg-base-200 text-base-content border-base-300'
@@ -71,7 +71,7 @@ export function Portfolio() {
         variants={PortfolioVariants}
         initial="itemOut"
         whileInView="itemIn"
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8"
       >
         <AnimatePresence>
           {filteredItems.map((item) => (

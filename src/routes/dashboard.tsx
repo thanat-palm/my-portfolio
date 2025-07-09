@@ -1,31 +1,62 @@
 
 // routes/dashboard/__layout.tsx
-import { createFileRoute, Outlet } from '@tanstack/react-router'
-import { Footer } from '@/layouts/Footer'
-import { Navbar } from '@/layouts/Navbar'
+import { welcomeVariants } from '@/constants/AnimateVariants';
+import { createFileRoute, Link } from '@tanstack/react-router'
 import * as motion from "motion/react-client"
-import Sidebar from '@/layouts/Sidebar'
-import { navVariants } from '@/constants/AnimateVariants'
+import { useTranslation } from 'react-i18next'
 
 export const Route = createFileRoute('/dashboard')({
   component: DashboardLayout,
 })
 
 function DashboardLayout() {
+  const {t} = useTranslation();
   return (
-    <div className=''>
-      <Sidebar className="fixed z-30 h-full md:hidden"/>
+  <div className="w-screen h-screen flex flex-col gap-6 justify-center items-center">
       <motion.div 
-        className='flex left-0 justify-center w-full fixed top-2 z-30' 
-        variants={navVariants} 
-        initial="closed"
-        animate="open"
-        exit="closed"
-      >
-        <Navbar className='items-center overflow-hidden p-2 bg-base-100/40 backdrop-blur-3xl rounded-full border-2 border-primary max-lg:hidden'/>
+        className=""
+        variants={welcomeVariants}
+        initial="textOut"
+        animate="textIn"
+        >
+        <motion.h1 
+        className='text-9xl uppercase max-sm:text-8xl'
+        variants={welcomeVariants}
+        animate="textAnimate"
+        >
+          {t('welcome')}
+        </motion.h1>
       </motion.div>
-      <Outlet />
-      <Footer />
-    </div>
+        <div className="flex justify-center items-center w-full">
+          <motion.span 
+          className='divider origin-left w-full'
+          variants={welcomeVariants}
+          initial="dividerOut"
+          animate="dividerIn"
+          />
+          <motion.h2 
+            className='text-4xl max-sm:text-3xl mx-4 text-nowrap'
+            variants={welcomeVariants}
+            initial="textOut2"
+            animate="textIn2"
+            >
+            {t('click_to_dashboard')}
+          </motion.h2>
+          <motion.span 
+          className='divider origin-right w-full'
+          variants={welcomeVariants}
+          initial="dividerOut"
+          animate="dividerIn"
+          />
+        </div>
+        <motion.div 
+          className=""
+          variants={welcomeVariants}
+          initial="textOut3"
+          animate="textIn3"
+          >
+          <Link className='btn btn-soft btn-secondary btn-xl px-10 text-3xl max-sm:text-2xl max-sm:btn-lg rounded-4xl' to='/dashboard'>{t('click')}</Link>
+        </motion.div>
+  </div>
   )
 }

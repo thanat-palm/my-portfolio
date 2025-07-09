@@ -38,22 +38,22 @@ export default function Contact() {
   const { t } = useTranslation()
 
   return (
-    <section className="max-w-7xl mx-auto px-6 sm:px-12 md:px-20 py-28" id="contact">
+    <section className="max-w-7xl mx-auto px-4 sm:px-12 md:px-20 py-28" id="contact">
       {/* Header */}
       <motion.div
-        className="text-center mb-20"
+        className="text-center"
         variants={contactVariants}
         initial="childOut"
         whileInView="childIn"
       >
         <motion.h1
-          className="text-7xl sm:text-8xl font-extrabold text-primary"
+          className="text-6xl sm:text-8xl font-extrabold text-primary"
           variants={childUpVariants}
         >
           {t('contact-title')}
         </motion.h1>
         <motion.p
-          className="mt-4 text-3xl text-base-content font-light"
+          className=" text-lg sm:text-3xl text-base-content font-light mb-16"
           variants={childUpVariants}
         >
           {t('contact-subtitle')}
@@ -73,7 +73,7 @@ export default function Contact() {
 
         {/* Contact Info */}
         <motion.ul
-          className="space-y-6 text-3xl"
+          className="space-y-6 text-lg sm:text-3xl"
           variants={contactVariants}
           initial="childOut"
           whileInView="childIn"
@@ -84,14 +84,14 @@ export default function Contact() {
               className="flex items-center gap-6"
               variants={childLeftVariants}
             >
-              <div className="text-4xl text-primary">{list.icon}</div>
+              <div className="text-2xl sm:text-4xl text-primary">{list.icon}</div>
               <div className="flex-1 text-nowrap">{list.value}</div>
               {list.link && (
                 <a
                   href={list.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl text-primary hover:scale-110 transition-transform"
+                  className="text-lg sm:text-xl text-primary hover:scale-110 transition-transform"
                 >
                   <FaExternalLinkAlt />
                 </a>

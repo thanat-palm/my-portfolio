@@ -8,7 +8,7 @@ export const Route = createRootRoute({
     return (
       <div className="relative">
         <Outlet />
-        <SwitchMenus className="absolute top-2 right-2 rounded-full p-2 z-30 max-md:hidden" />
+        <SwitchMenus className="absolute top-2 right-2 rounded-full p-2 z-30 max-lg:hidden" />
         <ScrollToTop />
         <Toast />
       </div>
