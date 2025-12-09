@@ -34,7 +34,7 @@ export const About = () => {
                   </div>
                 </MagicCard>
                 <div className="card-actions">
-                  <a href="/public/pdf/myresume.pdf" target="_blank" rel="noopener noreferrer" className=' btn btn-soft btn-primary sm:btn-lg sm:text-xl transition-all duration-300 rounded-box '><PiNotepadBold /> My Resume</a>
+                  <a href="pdf/myresume.pdf" target="_blank" rel="noopener noreferrer" className=' btn btn-soft btn-primary sm:btn-lg sm:text-xl transition-all duration-300 rounded-box '><PiNotepadBold />My Resume</a>
                 </div>
               </div>
             </div>
